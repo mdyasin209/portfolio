@@ -737,7 +737,7 @@ body[data-theme="light"] .theme-toggle .moon {
 
 .about-image {
     min-height: clamp(360px, 45vw, 500px);
-    background: linear-gradient(180deg, rgba(109, 92, 255, .1), rgba(0, 212, 255, .08)), url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80") center/cover;
+    background: linear-gradient(180deg, rgba(109, 92, 255, .1), rgba(0, 212, 255, .08)), url("./Assets/Yasin\ Desk\ Image.png") center/cover;
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-card-border);
 }
