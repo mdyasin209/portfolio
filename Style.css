@@ -47,7 +47,7 @@
     --line-height-heading: 1.08;
 
     /* Layout */
-    --container: 1260px;
+    --container: 1440px;
     --container-padding: 20px;
     --section-padding: clamp(72px, 9vw, 110px);
     --grid-gap: clamp(16px, 2.2vw, 24px);
