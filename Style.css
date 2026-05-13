@@ -47,8 +47,8 @@
     --line-height-heading: 1.08;
 
     /* Layout */
-    --container: 1180px;
-    --container-padding: clamp(16px, 4vw, 32px);
+    --container: 1260px;
+    --container-padding: 20px;
     --section-padding: clamp(72px, 9vw, 110px);
     --grid-gap: clamp(16px, 2.2vw, 24px);
     --card-padding: clamp(20px, 3vw, 32px);
