@@ -2984,6 +2984,7 @@ body[data-theme="light"] .arrow-img-light {
 }
 .project-thumb-wrap{
     overflow: hidden;
+    width: 100%;
 }
 
 .project-thumb img {
