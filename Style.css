@@ -2981,7 +2981,8 @@ body[data-theme="light"] .arrow-img-light {
 .project-card{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .project-thumb {
