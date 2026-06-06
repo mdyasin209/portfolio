@@ -2985,6 +2985,7 @@ body[data-theme="light"] .arrow-img-light {
 .project-thumb-wrap{
     overflow: hidden;
     width: 100%;
+    border-radius: var(--radius-md);
 }
 
 .project-thumb img {
