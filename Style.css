@@ -2923,10 +2923,7 @@ body[data-theme="light"] .arrow-img-light {
 }
 
 .trusted-logo img {
-    width: 28px;
     height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
     flex: 0 0 auto;
 }
 
