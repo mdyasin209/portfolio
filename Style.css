@@ -2982,6 +2982,9 @@ body[data-theme="light"] .arrow-img-light {
 .project-thumb {
     background: linear-gradient(135deg, rgba(109, 92, 255, .65), rgba(0, 212, 255, .35));
 }
+.project-thumb-wrap{
+    overflow: hidden;
+}
 
 .project-thumb img {
     width: 100%;
