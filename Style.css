@@ -2848,10 +2848,8 @@ body[data-theme="light"] .skill-thumb {
 }
 /* ================= UPDATED SECTIONS ================= */
 .logo-img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%;
+    max-width: 120px;
     flex: 0 0 auto;
 }
 
