@@ -178,7 +178,7 @@
     }, { threshold: 0.35 });
     skillsObserver.observe(skillsBoard);
   }
-
+/*
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
   form?.addEventListener('submit', (event) => {
@@ -189,7 +189,7 @@
     }
     success?.classList.add('show');
     form.reset();
-  });
+  });*/
 
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
