@@ -587,17 +587,29 @@
                 </div>
                 <form class="contact-form glass-card reveal reveal-right" id="contactForm" novalidate="" netlify data-netlify="true">
                     <div class="form-grid">
-                        <div class="form-group"><label for="name">Your Name</label><input id="name" name="name"
+                        <div class="form-group"><label for="name">Name</label><input id="name" name="name"
                                 placeholder="John Doe" required="" type="text" /></div>
-                        <div class="form-group"><label for="email">Your Email</label><input id="email" name="email"
+                        <div class="form-group"><label for="email">Email</label><input id="email" name="email"
                                 placeholder="john@example.com" required="" type="email" /></div>
                         <div class="form-group"><label for="phone">Phone Number</label><input id="phone" inputmode="tel"
                                 name="phone" pattern="^[+]?[0-9]{7,15}$" placeholder="+8801712345678" required=""
                                 title="Please enter numbers only. You can use + at the beginning." type="tel" /></div>
                         <div class="form-group"><label for="budget">Project Budget</label><input id="budget"
                                 name="budget" placeholder="$500 - $1500" type="text" required="" /></div>
-                        <div class="form-group full"><label for="service">Service Needed</label><input id="service"
-                                name="service" placeholder="Webflow / Frontend / CMS" type="text" required=""/></div>
+                        <div class="form-group full">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Webflow Development">Webflow Development</option>
+                                <option value="Frontend Development">Frontend Development</option>
+                                <option value="Landing Page">WordPress Development</option>
+                                <option value="Landing Page">Shopify Development</option>
+                                <option value="CMS Development">CMS Development</option>
+                                <option value="Website Redesign">Website Redesign</option>
+                                <option value="Landing Page">Landing Page</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
                         <div class="form-group full"><label for="message">Project Details</label><textarea id="message"
                                 name="message" placeholder="Tell me about your project..." required=""></textarea></div>
                         <div class="form-group full"><button class="btn btn-primary" id="submitBtn" type="submit">Send
