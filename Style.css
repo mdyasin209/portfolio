@@ -1099,7 +1099,7 @@ label {
 }
 
 input,
-textarea {
+textarea, #service {
     width: 100%;
     border: 1px solid var(--color-card-border);
     background: var(--input-bg);
