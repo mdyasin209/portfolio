@@ -1109,6 +1109,9 @@ textarea, #service {
     outline: none;
     transition: border-color var(--transition), background var(--transition);
 }
+#service option {
+    color: var(--input-text);
+}
 
 input:focus,
 textarea:focus {
