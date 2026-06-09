@@ -1110,7 +1110,7 @@ textarea, #service {
     transition: border-color var(--transition), background var(--transition);
 }
 #service option {
-    color: var(--input-text);
+    color: var(--color-muted);
 }
 
 input:focus,
