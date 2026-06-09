@@ -191,17 +191,30 @@
     form.reset();
   });*/
   const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
+const success = document.getElementById('formSuccess');
 
-  form?.addEventListener('submit', (event) => {
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      form.reportValidity();
-      return;
-    }
+form?.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-  // Valid hole Netlify ke submit korte dao
-  });
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const formData = new FormData(form);
+
+  try {
+    await fetch('/', {
+      method: 'POST',
+      body: formData
+    });
+
+    success?.classList.add('show');
+    form.reset();
+  } catch (error) {
+    alert('Something went wrong. Please try again.');
+  }
+});
 
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
