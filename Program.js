@@ -190,6 +190,18 @@
     success?.classList.add('show');
     form.reset();
   });*/
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+
+  form?.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      return;
+    }
+
+  // Valid hole Netlify ke submit korte dao
+  });
 
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
