@@ -64,7 +64,7 @@
     --radius-pill: 999px;
 
     /* Buttons */
-    --btn-padding-y: clamp(12px, 1.4vw, 14px);
+    --btn-padding-y: clamp(10px, 1.4vw, 10px);
     --btn-padding-x: clamp(18px, 2.2vw, 22px);
     --btn-small-padding-y: clamp(9px, 1vw, 10px);
     --btn-small-padding-x: clamp(14px, 1.8vw, 16px);
