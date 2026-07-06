@@ -627,7 +627,7 @@ body[data-theme="light"] .theme-toggle .moon {
 .profile-card-inner {
     min-height: clamp(360px, 44vw, 470px);
     border-radius: var(--radius-lg);
-    background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04)), url("./Assets/Yasin\ Profile.png") center/cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04)), url("./Assets/Yasin\ Protfolio\ images.png") center/cover;
     position: relative;
     overflow: hidden;
 }
