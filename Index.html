@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,651 +14,2549 @@
         content="Yasin Webflow Developer, Yasin.dev, Webflow Developer Bangladesh, Freelance Webflow Developer, Figma to Webflow Developer, Webflow CMS Developer, Frontend Developer Bangladesh, Webflow Expert, Webflow Animation, Webflow Automation">
     <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://imyasin.dev/">
+    <link rel="canonical" href="https://imyasin.dev/">
 
-<meta property="og:title" content="Yasin.dev | Webflow Developer in Bangladesh">
-<meta property="og:description" content="Webflow and frontend developer specializing in Figma to Webflow, CMS, responsive websites, animations, and full website development.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://imyasin.dev/">
-<meta property="og:image" content="https://imyasin.dev/Assets/og-image.png">
+    <meta property="og:title" content="Yasin.dev | Webflow Developer in Bangladesh">
+    <meta property="og:description" content="Webflow and frontend developer specializing in Figma to Webflow, CMS, responsive websites, animations, and full website development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imyasin.dev/">
+    <meta property="og:image" content="https://imyasin.dev/Assets/og-image.png">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yasin.dev | Webflow Developer in Bangladesh">
-<meta name="twitter:description" content="Webflow and frontend developer from Bangladesh specializing in Figma to Webflow, CMS, responsive websites, animations, and full website development.">
-<meta name="twitter:image" content="https://imyasin.dev/Assets/twitter-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yasin.dev | Webflow Developer in Bangladesh">
+    <meta name="twitter:description" content="Webflow and frontend developer from Bangladesh specializing in Figma to Webflow, CMS, responsive websites, animations, and full website development.">
+    <meta name="twitter:image" content="https://imyasin.dev/Assets/twitter-card.png">
 </head>
 <body data-theme="dark">
+   
+    <!-- =================================
+         HEADER SECTION START
+    ================================== -->
     <header class="site-header" id="siteHeader">
-        <div class="nav-wrap" id="navWrap">
-            <div class="container nav">
-                <a aria-label="Home" class="logo" href="#home">
-                    <img alt="Yasin.dev logo" class="logo-img" src="Assets/Yasin-logo.svg" />
-                </a>
-                <nav class="nav-links" id="navLinks"><a href="#about">About</a><a href="#services">Services</a><a
-                        href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
-                <div class="nav-actions">
-                    <button aria-label="Switch theme" aria-pressed="false" class="theme-toggle" id="themeToggle"
-                        type="button">
-                        <img alt="Light mode icon" class="theme-icon theme-icon-light"
-                            src="Assets/sun.png" />
-                        <img alt="Dark mode icon" class="theme-icon theme-icon-dark"
-                            src="Assets/moon.png" />
-                    </button>
-                    <a class="btn btn-primary btn-small" href="#contact">Hire Me</a>
-                    <button aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn"
-                        type="button">Menu</button>
-                </div>
-            </div>
+        <div class="container nav-wrapper">
+
+            <!-- Logo Start -->
+            <a
+                href="/"
+                class="site-logo"
+                aria-label="Yasin.dev home"
+            >
+                <img
+                    src="Assets/yasin-dev-logo.svg"
+                    alt=""
+                    class="site-logo-icon"
+                    aria-hidden="true"
+                >
+
+                
+            </a>
+            <!-- Logo End -->
+
+            <!-- Desktop Navigation Start -->
+            <nav
+                class="desktop-navigation"
+                aria-label="Primary navigation"
+            >
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#process">Process</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#tools">Tools</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <!-- Desktop Navigation End -->
+
+            <!-- Header CTA Start -->
+            <a
+                href="#contact"
+                class="btn btn-primary header-cta"
+            >
+                <span>Hire Me</span>
+
+                <span class="btn-icon-wrap">
+                    <img
+                        src="Assets/next-arrow-light.svg"
+                        alt=""
+                        class="btn-icon"
+                        aria-hidden="true"
+                    >
+                </span>
+            </a>
+            <!-- Header CTA End -->
+
+            <!-- Mobile Menu Button Start -->
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileNavigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Mobile Menu Button End -->
+
         </div>
+
+        <!-- Mobile Navigation Start -->
+        <nav
+            class="mobile-navigation"
+            id="mobileNavigation"
+            aria-label="Mobile navigation"
+        >
+            <div class="container mobile-navigation-inner">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#process">Process</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#tools">Tools</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary mobile-navigation-cta"
+                >
+                    Start a Project
+
+                    <span class="btn-icon-wrap">
+                        <img
+                            src="Assets/arrow-up-right-light.svg"
+                            alt=""
+                            class="btn-icon"
+                            aria-hidden="true"
+                        >
+                    </span>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Navigation End -->
     </header>
+    <!-- =================================
+         HEADER SECTION END
+    ================================== -->
+
+
     <main>
-        <section class="hero section" id="home">
-            <div class="container hero-grid">
-                <div class="reveal reveal-left"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Available for Webflow &amp; Frontend
-                        projects</span>
-                    <h1><span class="gradient-text">Webflow </span> Developer & <span class="gradient-text">Figma</span> to <span class="gradient-text">Webflow</span> Expert.</h1>
-                    <p>I build responsive Webflow websites with Figma to Webflow development, CMS setup, custom code, smooth animations, and clean layouts designed to convert visitors into clients.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects">View Projects <span class="btn-arrow-wrap"><img
-                                    alt="" class="arrow-img arrow-img-light" src="Assets/next-arrow-light.svg" /><img
-                                    alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg" /></span></a>
-                        <a class="btn btn-secondary" href="#contact">Start a Project</a>
+        <!-- =================================
+             HERO SECTION START
+        ================================== -->
+        <section
+            class="section hero-section"
+            id="home"
+        >
+            <div class="container hero-layout">
+
+                <!-- Hero Content Start -->
+                <div class="hero-content reveal reveal-left">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Available for Webflow &amp; Frontend projects
                     </div>
-                    <div class="hero-meta"><span><strong>Webflow</strong>
-                            Development</span><span><strong>Frontend</strong>
-                            Interfaces</span><span><strong>Responsive</strong> Design</span></div>
-                </div>
-                <div class="profile-card glass-card reveal reveal-right">
-                    <div class="profile-card-inner">
-                        <div class="profile-badge">
-                            <h3>Webflow Developer &amp; Frontend Builder</h3>
-                            <p>Landing pages, portfolio sites, business websites, CMS collections, HTML, CSS, JavaScript
-                                and custom frontend sections.</p>
+
+                    <h1>
+                        Webflow Developer &amp;
+                        <span>Figma to Webflow</span>
+                        Expert.
+                    </h1>
+
+                    <p class="hero-description">
+                        I build responsive Webflow websites with Figma to Webflow development, CMS setup, custom code, smooth animations, and clean layouts designed to convert visitors into clients.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a
+                            href="#projects"
+                            class="btn btn-primary"
+                        >
+                            View Projects
+
+                            <span class="btn-icon-wrap">
+                                <img
+                                    src="Assets/next-arrow-light.svg"
+                                    alt=""
+                                    class="btn-icon"
+                                    aria-hidden="true"
+                                >
+                            </span>
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                        >
+                            Start a Project
+
+                            <span class="btn-icon-wrap">
+                                <img
+                                    src="Assets/next-arrow-dark.png"
+                                    alt=""
+                                    class="btn-icon"
+                                    aria-hidden="true"
+                                >
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Hero Features Start -->
+                    <div class="hero-features">
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/Webflow_icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                Webflow<br>
+                                Development
+                            </span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="trusted reveal reveal-up">
-            <div class="container trusted-grid">
-                <div><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Trusted by demo brands</span>
-                    <div class="brand-marquee">
-                        <div class="brand-track">
-                            <div class="trusted-logo"><img alt="Dhaka Studio" src="Assets/Dhaka Studio Logo.svg"/>Dhaka Studio</div>
-                            <div class="trusted-logo"><img alt="Kredit Academy" src="Assets/Kredit Academy Logo.avif"/></div>
-                            <div class="trusted-logo"><img alt="Kasu Pay" src="Assets/Kasu Pay Logo.avif"/></div>
-                            <div class="trusted-logo"><img alt="ecosysteme" src="Assets/ecosysteme logo.png"/></div>
-                            <div class="trusted-logo"><img alt=" Jobhook Logo"src="Assets/Jobhook Logo.png"/></div>
-                            <div class="trusted-logo"><img alt="Dhaka Studio" src="Assets/Dhaka Studio Logo.svg"/>Dhaka Studio</div>
-                            <div class="trusted-logo"><img alt="Kredit Academy" src="Assets/Kredit Academy Logo.avif"/></div>
-                            <div class="trusted-logo"><img alt="Kasu Pay" src="Assets/Kasu Pay Logo.avif"/></div>
-                            <div class="trusted-logo"><img alt="ecosysteme" src="Assets/ecosysteme logo.png"/></div>
-                            <div class="trusted-logo"><img alt=" Jobhook Logo"src="Assets/Jobhook Logo.png"/></div>
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/frontend-development.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                Frontend<br>
+                                Interfaces
+                            </span>
                         </div>
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/website-redesign.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                Responsive<br>
+                                Design
+                            </span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/cms-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                CMS &amp;<br>
+                                Collections
+                            </span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/cms-setup.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                Custom Code &amp;<br>
+                                Animations
+                            </span>
+                        </div>
+
                     </div>
+                    <!-- Hero Features End -->
+
                 </div>
-                <div class="stats-grid" id="stats">
-                    <div class="stat-card"><strong data-count="90">0</strong>Projects</div>
-                    <div class="stat-card"><strong data-count="4">0</strong>Years</div>
-                    <div class="stat-card"><strong data-count="95">0</strong>Satisfaction</div>
-                    <div class="stat-card"><strong data-count="7">0</strong>Avg Launch</div>
+                <!-- Hero Content End -->
+
+
+                <!-- Hero Visual Start -->
+                <div class="hero-visual reveal reveal-right">
+
+                    <div class="hero-dot-pattern"></div>
+                    <div class="hero-decoration hero-decoration-one"></div>
+                    <div class="hero-decoration hero-decoration-two"></div>
+
+                    <div class="hero-image-wrap">
+                        <img
+                            src="Assets/Yasin Protfolio images.png"
+                            alt="Webflow developer portrait"
+                            class="hero-profile-image"
+                        >
+                    </div>
+
+                    <div class="hero-floating-card">
+                        <strong>
+                            Webflow Developer &amp;<br>
+                            Frontend Builder
+                        </strong>
+
+                        <p>
+                            Landing pages, portfolio sites, business websites,
+                            CMS collections, HTML, CSS, JavaScript and custom
+                            frontend sections.
+                        </p>
+                    </div>
+
                 </div>
+                <!-- Hero Visual End -->
+
             </div>
         </section>
-        <section class="section section-alt" id="about">
-            <div class="container about-grid">
-                <div class="about-image reveal reveal-left"><img alt="Workspace image" class="about-random-img active"
-                        src="Assets/Tech Image 01.jpg" /><img alt="Web development workspace" class="about-random-img"
-                        src="Assets/tech img 02.avif" /><img alt="Modern office workspace" class="about-random-img"
-                        src="Assets/tech image 03.png" /><img alt="Laptop coding desk" class="about-random-img"
-                        src="Assets/tech image 04.jpg" /><img alt="Creative design desk" class="about-random-img"
-                        src="Assets/tech image 05.jpg" /><img alt="Creative design desk" class="about-random-img"
-                        src="Assets/tech image 06.jpg" /><img alt="Creative design desk" class="about-random-img"
-                        src="Assets/tech image 07.jpg" />
-                </div>
-                <div class="about-content glass-card reveal reveal-right"><span class="eyebrow"><img alt=""
-                            class="icon-img" src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> About me</span>
-                    <h2 class="section-title">I turn Figma designs and ideas into polished Webflow and frontend
-                        experiences.</h2>
-                    <p class="section-desc">I help businesses create websites that are easy to manage, beautiful on
-                        every device, and optimized for real business goals.</p>
-                    <ul class="check-list">
-                        <li>Pixel-perfect Webflow and frontend development.</li>
-                        <li>Responsive layouts for desktop, tablet, and mobile.</li>
-                        <li>CMS collections for blogs, portfolios, and case studies.</li>
-                        <li>HTML, CSS, JavaScript interactions, SEO basics, and launch support.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="services">
+        <!-- =================================
+             HERO SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             BRAND SECTION START
+        ================================== -->
+        <section class="brand-section">
             <div class="container">
-                <div class="section-head reveal reveal-up"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Services</span>
-                    <h2 class="section-title">Everything you need to launch a professional Webflow or frontend website.
+                <div class="brand-panel glass-card reveal">
+
+                    <div class="section-kicker">
+                        <span></span>
+                        Trusted by demo brands
+                    </div>
+
+                    <p class="brand-description">
+                        I've had the privilege of working with amazing brands
+                        and startups.
+                    </p>
+                    <!-- ================================BRAND MARQUEE START
+                ================================= -->
+                <div class="brand-marquee">
+
+                    <div class="brand-marquee-track">
+
+                        <!-- Original Brand Group Start -->
+                        <div class="brand-list">
+
+                            <div class="brand-item">
+                                <img src="Assets/Dhaka Studio Logo.svg" alt="Dhaka Studio">
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kredit Academy Logo.avif"
+                                    alt="Kredit Academy"
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kasu Pay Logo.avif"
+                                    alt="KashuPay"
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/ecosysteme logo.png"
+                                    alt="Ecosysteme"
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Jobhook Logo.png"
+                                    alt="Jobhook"
+                                >
+                            </div>
+
+                        </div>
+                        <!-- Original Brand Group End -->
+
+
+                        <!-- Duplicate Brand Group Start -->
+                        <div
+                            class="brand-list"
+                            aria-hidden="true"
+                        >
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Dhaka Studio Logo.svg"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kredit Academy Logo.avif"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kasu Pay Logo.avif"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/ecosysteme logo.png"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Jobhook Logo.png"
+                                    alt=""
+                                >
+                            </div>
+
+                        </div>
+                        <!-- Duplicate Brand Group End -->
+                        <!-- Duplicate Brand Group Start -->
+                        <div
+                            class="brand-list"
+                            aria-hidden="true"
+                        >
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Dhaka Studio Logo.svg"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kredit Academy Logo.avif"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Kasu Pay Logo.avif"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/ecosysteme logo.png"
+                                    alt=""
+                                >
+                            </div>
+
+                            <div class="brand-item">
+                                <img
+                                    src="Assets/Jobhook Logo.png"
+                                    alt=""
+                                >
+                            </div>
+
+                        </div>
+                        <!-- Duplicate Brand Group End -->
+
+                    </div>
+
+                </div>
+        <!-- ================================
+            BRAND MARQUEE END
+        ================================= -->
+
+                </div>
+            </div>
+        </section>
+        <!-- =================================
+             BRAND SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             ABOUT SECTION START
+        ================================== -->
+        <section
+            class="section about-section"
+            id="about"
+        >
+            <div class="container">
+
+                <!-- Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        About Me
+                    </div>
+
+                    <h2>
+                        Building beautiful, fast &amp; functional
+                        <span>web experiences.</span>
                     </h2>
-                    <p class="section-desc">Choose a service or combine multiple services for a complete website build.
+
+                    <p>
+                        I’m Yasin, a Webflow Developer and Frontend Developer
+                        from Bangladesh. I help businesses and startups bring
+                        their ideas to life with modern, responsive and
+                        high-performing websites.
                     </p>
                 </div>
-                <div class="card-grid">
-                    <article class="service-card glass-card reveal reveal-up">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/webflow-development.svg" /></div>
+                <!-- Section Header End -->
+
+                <div class="about-layout">
+
+                    <div class="about-action reveal reveal-left">
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                        >
+                            More About Me
+
+                            <span class="btn-icon-wrap">
+                                <img
+                                    src="Assets/next-arrow-dark.png"
+                                    alt=""
+                                    class="btn-icon"
+                                    aria-hidden="true"
+                                >
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Statistics Start -->
+                    <div class="statistics-grid reveal reveal-right">
+
+                        <article class="statistic-card">
+                            <div class="statistic-icon icon-background-blue">
+                                <img
+                                    src="Assets/projects-completed.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </div>
+
+                            <strong>90+</strong>
+                            <span>Projects Completed</span>
+                        </article>
+
+                        <article class="statistic-card">
+                            <div class="statistic-icon icon-background-yellow">
+                                <img
+                                    src="Assets/happy-clients.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </div>
+
+                            <strong>85+</strong>
+                            <span>Happy Clients</span>
+                        </article>
+
+                        <article class="statistic-card">
+                            <div class="statistic-icon icon-background-green">
+                                <img
+                                    src="Assets/years-experience.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </div>
+
+                            <strong>4+</strong>
+                            <span>Years of Experience</span>
+                        </article>
+
+                        <article class="statistic-card">
+                            <div class="statistic-icon icon-background-purple">
+                                <img
+                                    src="Assets/client-satisfaction.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </div>
+
+                            <strong>100%</strong>
+                            <span>Client Satisfaction</span>
+                        </article>
+
+                    </div>
+                    <!-- Statistics End -->
+
+                </div>
+
+            </div>
+        </section>
+        <!-- =================================
+             ABOUT SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             SERVICES SECTION START
+        ================================== -->
+        <section
+            class="section services-section"
+            id="services"
+        >
+            <div class="container">
+
+                <!-- Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        Services
+                    </div>
+
+                    <h2>
+                        Everything you need to launch a
+                        <span>professional</span>
+                        Webflow or frontend website.
+                    </h2>
+
+                    <p>
+                        From design to development, I provide end-to-end
+                        solutions for modern websites.
+                    </p>
+                </div>
+                <!-- Section Header End -->
+
+                <!-- Services Grid Start -->
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+                        <div class="service-icon icon-background-blue">
+                            <img
+                                src="Assets/Webflow_icon.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
                         <h3>Webflow Development</h3>
-                        <p>Responsive Webflow builds with clean structure and smooth animations.</p>
+
+                        <p>
+                            Responsive Webflow builds with clean structure and smooth animations.
+                        </p>
                     </article>
-                    <article class="service-card glass-card reveal reveal-zoom">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/frontend-development.svg" /></div>
+
+                    <article class="service-card reveal reveal-delay-1">
+                        <div class="service-icon icon-background-pink">
+                            <img
+                                src="Assets/frontend-development.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
                         <h3>Frontend Development</h3>
-                        <p>Modern HTML, CSS, and JavaScript interfaces.</p>
+
+                        <p>
+                            Modern HTML, CSS, and JavaScript interfaces.
+                        </p>
                     </article>
-                    <article class="service-card glass-card reveal reveal-flip">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/cms-setup.svg" /></div>
-                        <h3>CMS Setup</h3>
-                        <p>CMS collections for blogs, projects, teams, and resources.</p>
+
+                    <article class="service-card reveal reveal-delay-2">
+                        <div class="service-icon icon-background-green">
+                            <img
+                                src="Assets/cms-setup.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
+                        <h3>CMS &amp; Dynamic Websites</h3>
+
+                        <p>
+                            CMS collections for blogs, projects, teams, and resources.
+                        </p>
                     </article>
-                    <article class="service-card glass-card reveal reveal-left">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/website-redesign.svg" /></div>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon icon-background-purple">
+                            <img
+                                src="Assets/website-redesign.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
                         <h3>Website Redesign</h3>
-                        <p>Modern redesigns that improve trust, flow, and usability.</p>
+
+                        <p>
+                            Modern redesigns that improve trust, flow, and usability.
+                        </p>
                     </article>
-                    <article class="service-card glass-card reveal reveal-up">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/seo-basics.svg" /></div>
+
+                    <article class="service-card reveal reveal-delay-1">
+                        <div class="service-icon icon-background-yellow">
+                            <img
+                                src="Assets/seo-basics.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
                         <h3>SEO Basics</h3>
-                        <p>Meta, heading, image, and page structure optimization.</p>
+
+                        <p>
+                            Meta, heading, image, and page structure optimization.
+                        </p>
                     </article>
-                    <article class="service-card glass-card reveal reveal-right">
-                        <div class="icon-badge"><img alt="" class="icon-img"
-                                src="Assets/maintenance.svg" /></div>
+
+                    <article class="service-card reveal reveal-delay-2">
+                        <div class="service-icon icon-background-blue">
+                            <img
+                                src="Assets/maintenance.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
                         <h3>Maintenance</h3>
-                        <p>Updates, bug fixes, new sections, and ongoing improvements.</p>
+
+                        <p>
+                            Updates, bug fixes, new sections, and ongoing improvements.
+                        </p>
                     </article>
+
                 </div>
+                <!-- Services Grid End -->
+
             </div>
         </section>
-        <section class="section section-soft" id="projects">
+        <!-- =================================
+             SERVICES SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             PROJECTS SECTION START
+        ================================== -->
+        <section
+            class="section projects-section"
+            id="projects"
+        >
             <div class="container">
-                <div class="section-head reveal reveal-left"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Featured projects</span>
-                    <h2 class="section-title">Selected Webflow and frontend projects.</h2>
-                    <p class="section-desc">Use filters to show different project categories.</p>
+
+                <!-- Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        Projects
+                    </div>
+
+                    <h2>
+                        Selected Webflow and frontend projects.
+                    </h2>
+
+                    <p>
+                        Here are some of my recent projects that helped
+                        businesses grow.
+                    </p>
                 </div>
-                <div class="project-filter reveal reveal-up">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn"data-filter="webflow">Webflow</button>
-                    <button class="filter-btn"data-filter="frontend">Frontend</button>
-                    <button class="filter-btn" data-filter="full-development">Full Development</button>
-                    <button class="filter-btn" data-filter="cms">CMS</button>
-                    <button class="filter-btn" data-filter="figma-to-webflow">Figma to Webflow</button>
-                    <button class="filter-btn" data-filter="Animation">Animation</button>
-                    <button class="filter-btn" data-filter="Automation">Automation</button>
-                    <button class="filter-btn" data-filter="payment-integration">Payment Integration</button>
-                    <button class="filter-btn" data-filter="multi-step-form">Multi Step Form</button>
-                    <button class="filter-btn" data-filter="membership-system">Membership System</button>
-                    <button class="filter-btn" data-filter="localization">Localization</button>
+                <!-- Section Header End -->
+
+                <!-- Project Filters Start -->
+                <div
+                    class="project-filter-list reveal"
+                    aria-label="Filter projects"
+                >
+                    <button
+                        class="project-filter-button is-active"
+                        type="button"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="webflow"
+                    >
+                        Webflow
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="frontend"
+                    >
+                        Frontend
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="full-development"
+                    >
+                        Full Development
+                    </button>
+                    
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="cms"
+                    >
+                        CMS
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="figma-to-webflow"
+                    >
+                        Figma to Webflow
+                    </button>
+
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="animation"
+                    >
+                        Animation
+                    </button>
+
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="automation"
+                    >
+                        Automation
+                    </button>
+
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="payment-integration"
+                    >
+                        Payment Integration
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="multi-step-form"
+                    >
+                        Multi Step Form
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="membership-system"
+                    >
+                        Membership System
+                    </button>
+                    <button
+                        class="project-filter-button"
+                        type="button"
+                        data-filter="localization"
+                    >
+                        Localization
+                    </button>
                 </div>
-                <div class="card-grid project-grid">
-                    <article class="project-card glass-card reveal reveal-up" data-category="Webflow figma-to-webflow           full-development frontend cms">
-                        <div class="project-card-top-wrap">
-                            <div class="project-thumb">
-                                <div class="project-thumb-wrap">
-                                    <img alt="Startup SaaS project thumbnail" src="Assets/Dhaka Studio Thumbnail.png"/>
-                                </div>
+                <!-- Project Filters End -->
+
+                <!-- Projects Grid Start -->
+                <div class="projects-grid">
+
+                    <article
+                        class="project-card reveal"
+                        data-category="webflow figma-to-webflow full-development frontend cms"
+                    >
+                        <a href="https://www.studiodhakaltd.com" target="_blank">
+                            <div class="project-image-link">
+                                <img
+                                    src="Assets/Dhaka Studio Thumbnail.png"
+                                    alt="SaaS landing page project"
+                                    class="project-image"
+                                >
+                                <span class="project-view-icon">
+                                    <img
+                                        src="Assets/up-arrow-black.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
                             </div>
+
                             <h3>Studio Dhaka Ltd</h3>
-                            <p>Fully developed a modern architecture portfolio website in Webflow with a custom grid-based design system, responsive layouts, and dynamic CMS-powered content management.</p>
-                            <div class="project-tags"><span class="tag">Webflow</span><span class="tag">Figma to Webflow</span><span class="tag">Full Development</span><span class="tag">Frontend</span><span class="tag">CMS</span></div>
-                        </div>
-                        <a class="btn btn-secondary btn-small" href="https://www.studiodhakaltd.com" target="_blank">Visit Website
-                            <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                    src="Assets/next-arrow-dark.png" /><img alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg " /></span></a>
+
+                            <p>
+                                Fully developed a modern architecture portfolio website in Webflow with a custom grid-based design system, responsive layouts, and dynamic CMS-powered content management.
+                            </p>                                                        
+
+                            <div class="project-tags">
+                                <span>Webflow</span>
+                                <span>CMS</span>
+                                <span>Frontend</span>
+                                <span>Full Development</span>
+                                <span>Figma to Webflow</span>
+                            </div>
+                        </a>
                     </article>
-                    <article class="project-card glass-card reveal reveal-up" data-category="Webflow figma-to-webflow           full-development payment-integration multi-step-form">
-                        <div class="project-card-top-wrap">
-                            <div class="project-thumb">
-                            <div class="project-thumb-wrap">
-                                <img alt="Startup SaaS project thumbnail" src="Assets/Kredit Academy Thumbnail.png"/>
+                    <article
+                        class="project-card reveal"
+                        data-category="webflow figma-to-webflow full-development payment-integration multi-step-form"
+                    >
+                        <a href="https://www.kreditacademy.com" target="_blank">
+                            <div class="project-image-link">
+                                <img
+                                    src="Assets/Kredit Academy Thumbnail.png"
+                                    alt="Kredit Academy"
+                                    class="project-image"
+                                >
+                                <span class="project-view-icon">
+                                    <img
+                                        src="Assets/up-arrow-black.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
                             </div>
-                            </div>
+
                             <h3>Kredit Academy</h3>
-                            <p>Fully developed a responsive Webflow platform with Stripe payment integration, CMS setup, and smooth user experience for a financial education brand.</p>
-                            <div class="project-tags"><span class="tag">Webflow</span><span class="tag">Figma to Webflow</span><span class="tag">Full Development</span><span class="tag">Payment Integration</span><span class="tag">Multi Step Form</span></div>
-                        </div>
-                        <a class="btn btn-secondary btn-small" href="https://www.kreditacademy.com" target="_blank">Visit Website
-                            <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                    src="Assets/next-arrow-dark.png" /><img alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg "/></span></a>
+
+                            <p>
+                                Fully developed a responsive Webflow platform with Stripe payment integration, CMS setup, and smooth user experience for a financial education brand.
+                            </p>                                                        
+
+                            <div class="project-tags">
+                                <span>Webflow</span>
+                                <span>Payment Integration</span>
+                                <span>Multi Step Form</span>
+                                <span>Full Development</span>
+                                <span>Figma to Webflow</span>
+                            </div>
+                        </a>
                     </article>
-                    <article class="project-card glass-card reveal reveal-up" data-category="Webflow figma-to-webflow           full-development cms">
-                        <div class="project-card-top-wrap">
-                            <div class="project-thumb">
-                            <div class="project-thumb-wrap">
-                                <img alt="Startup SaaS project thumbnail" src="Assets/Kashu Thumbnail.png"/>
+                    <article
+                        class="project-card reveal"
+                        data-category="webflow figma-to-webflow full-development cms"
+                    >
+                        <a href="https://www.kashupay.com" target="_blank">
+                            <div class="project-image-link">
+                                <img
+                                    src="Assets/Kashu Thumbnail.png"
+                                    alt="SaaS landing page project"
+                                    class="project-image"
+                                >
+                                <span class="project-view-icon">
+                                    <img
+                                        src="Assets/up-arrow-black.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
                             </div>
-                            </div>
+
                             <h3>KashuPay</h3>
-                            <p>End-to-end Webflow development for a fintech platform, delivering responsive layouts, scalable CMS architecture, and streamlined payment-focused user experiences designed to support business growth and financial operations.</p>
-                            <div class="project-tags"><span class="tag">Webflow</span><span class="tag">Figma to Webflow</span><span class="tag">Full Development</span><span class="tag">CMS</span></div>
-                        </div>
-                        <a class="btn btn-secondary btn-small" href="https://www.kashupay.com" target="_blank">Visit Website
-                            <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                    src="Assets/next-arrow-dark.png" /><img alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg " /></span></a>
+
+                            <p>
+                                End-to-end Webflow development for a fintech platform, delivering responsive layouts, scalable CMS architecture, and streamlined payment-focused user experiences designed to support business growth and financial operations.
+                            </p>                                                        
+
+                            <div class="project-tags">
+                                <span>Webflow</span>
+                                <span>CMS</span>
+                                <span>Full Development</span>
+                                <span>Figma to Webflow</span>
+                            </div>
+                        </a>
                     </article>
-                    <article class="project-card glass-card reveal reveal-up" data-category="Webflow membership-system           full-development cms Automation localization">
-                        <div class="project-card-top-wrap">
-                            <div class="project-thumb">
-                            <div class="project-thumb-wrap">
-                                <img alt="Startup SaaS project thumbnail" src="Assets/Jobhook-thumbnail.png"/>
+                    <article
+                        class="project-card reveal"
+                        data-category="webflow automation membership-system full-development cms localization"
+                    >
+                        <a href="https://www.jobhookup.ca" target="_blank">
+                            <div class="project-image-link">
+                                <img
+                                    src="Assets/Jobhook-thumbnail.png"
+                                    alt="SaaS landing page project"
+                                    class="project-image"
+                                >
+                                <span class="project-view-icon">
+                                    <img
+                                        src="Assets/up-arrow-black.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
                             </div>
-                            </div>
+
                             <h3>JobHookUp</h3>
-                            <p>Developed an end-to-end hiring platform in Webflow with secure membership access, custom employer and candidate workflows, dynamic CMS architecture, and a fully responsive experience.</p>
-                            <div class="project-tags"><span class="tag">Webflow</span><span class="tag">Automation</span><span class="tag">Membership System</span><span class="tag">Full Development</span><span class="tag">CMS</span><span class="tag">Localization</span></div>
-                        </div>
-                        <a class="btn btn-secondary btn-small" href="https://www.jobhookup.ca" target="_blank">Visit Website
-                            <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                    src="Assets/next-arrow-dark.png" /><img alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg " /></span></a>
-                    </article>
-                    <article class="project-card glass-card reveal reveal-up" data-category="Webflow localization           full-development cms">
-                        <div class="project-card-top-wrap">
-                            <div class="project-thumb">
-                            <div class="project-thumb-wrap">
-                                <img alt="Startup SaaS project thumbnail" src="Assets/Ecosysteme-thumbnail.png"/>
+
+                            <p>
+                                Developed an end-to-end hiring platform in Webflow with secure membership access, custom employer and candidate workflows, dynamic CMS architecture, and a fully responsive experience.
+                            </p>                                                        
+
+                            <div class="project-tags">
+                                <span>Webflow</span>
+                                <span>CMS</span>
+                                <span>Automation</span>
+                                <span>Full Development</span>
+                                <span>Membership System</span>
+                                <span>Localization</span>
                             </div>
-                            </div>
-                            <h3>Ecosysteme</h3>
-                            <p>End-to-end Webflow development and localization for an AI platform, featuring multilingual content management, scalable CMS architecture, and a fully responsive user experience.</p>
-                            <div class="project-tags"><span class="tag">Webflow</span><span class="tag">Localization</span><span class="tag">Full Development</span><span class="tag">CMS</span></div>
-                        </div>
-                        <a class="btn btn-secondary btn-small" href="https://www.ecosysteme.ai" target="_blank">Visit Website
-                            <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                    src="Assets/next-arrow-dark.png" /><img alt="" class="arrow-img arrow-img-dark"
-                                    src="Assets/next-arrow-light.svg " /></span></a>
+                        </a>
                     </article>
                 </div>
-                <div class="project-pagination" id="projectPagination"></div>
+                <!-- Projects Grid End -->
+
+                <div class="section-button-wrap reveal">
+                    <a href="/projects" class="btn btn-primary">
+                        View All Projects
+
+                        <span class="btn-icon-wrap">
+                            <img
+                                src="Assets/next-arrow-light.svg"
+                                alt=""
+                                class="btn-icon"
+                                aria-hidden="true"
+                            >
+                        </span>
+                    </a>
+                </div>
+
             </div>
         </section>
-        <section class="section" id="process">
+        <!-- =================================
+             PROJECTS SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             PROCESS SECTION START
+        ================================== -->
+        <section
+            class="section process-section"
+            id="process"
+        >
             <div class="container">
-                <div class="section-head reveal reveal-up"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Process</span>
-                    <h2 class="section-title">A simple process from idea to launch.</h2>
+
+                <!-- Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        My Process
+                    </div>
+
+                    <h2>A simple process from idea to launch.</h2>
+
+                    <p>
+                        I follow a clear and proven process to deliver the best
+                        results.
+                    </p>
                 </div>
-                <div class="card-grid">
-                    <article class="process-card glass-card reveal reveal-left">
-                        <div class="step">01</div>
-                        <h3>Discovery</h3>
-                        <p>We discuss your goals, pages, audience, references, and project requirements.</p>
-                    </article>
-                    <article class="process-card glass-card reveal reveal-up">
-                        <div class="step">02</div>
-                        <h3>Structure</h3>
-                        <p>I plan sections, CMS needs, page flow, and conversion points.</p>
-                    </article>
-                    <article class="process-card glass-card reveal reveal-right">
-                        <div class="step">03</div>
-                        <h3>Design Review</h3>
-                        <p>I review your Figma, reference, or brand direction before building.</p>
-                    </article>
-                    <article class="process-card glass-card reveal reveal-left">
-                        <div class="step">04</div>
-                        <h3>Build</h3>
-                        <p>I develop the website with Webflow or frontend code.</p>
-                    </article>
-                    <article class="process-card glass-card reveal reveal-zoom">
-                        <div class="step">05</div>
-                        <h3>Testing</h3>
-                        <p>I check responsiveness, forms, speed basics, and browser issues.</p>
-                    </article>
-                    <article class="process-card glass-card reveal reveal-right">
-                        <div class="step">06</div>
-                        <h3>Launch</h3>
-                        <p>After final review, I help publish and hand over the project.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="section section-alt" id="testimonials">
-            <div class="container">
-                <div class="section-head reveal reveal-left"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Testimonials</span>
-                    <h2 class="section-title">What clients say about working with me.</h2>
-                </div>
-                <div class="testimonial-slider reveal reveal-up" id="testimonialSlider">
-                    <div class="testimonial-track">
-                        <article class="testimonial-card glass-card">
-                            <div class="rating-icons"><img alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" />
-                            </div>
-                            <p>“Yasin delivered a clean, responsive website and made the process easy.”</p>
-                            <div class="client-row"><img alt="Rahim Ahmed" class="client-img"
-                                    src="https://dummyimage.com/96x96/6d5cff/ffffff.png&amp;text=Client" />
-                                <div>
-                                    <h3>Rahim Ahmed</h3><span>Founder, Demo Studio</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="testimonial-card glass-card">
-                            <div class="rating-icons"><img alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" />
-                            </div>
-                            <p>“Great communication, fast delivery, and modern final website.”</p>
-                            <div class="client-row"><img alt="Nusrat Jahan" class="client-img"
-                                    src="https://dummyimage.com/96x96/00d4ff/ffffff.png&amp;text=Client" />
-                                <div>
-                                    <h3>Nusrat Jahan</h3><span>Marketing Lead</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="testimonial-card glass-card">
-                            <div class="rating-icons"><img alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" />
-                            </div>
-                            <p>“The CMS and frontend setup was exactly what we needed.”</p>
-                            <div class="client-row"><img alt="Tanvir Hasan" class="client-img"
-                                    src="https://dummyimage.com/96x96/38d996/ffffff.png&amp;text=Client" />
-                                <div>
-                                    <h3>Tanvir Hasan</h3><span>Director</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="testimonial-card glass-card">
-                            <div class="rating-icons"><img alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" /><img
-                                    alt="star icon" class="star-img"
-                                    src="https://dummyimage.com/24x24/transparent/ffd166.png&amp;text=%E2%98%85" />
-                            </div>
-                            <p>“The project was organized, responsive, and ready for launch.”</p>
-                            <div class="client-row"><img alt="Arafat Khan" class="client-img"
-                                    src="https://dummyimage.com/96x96/00d4ff/ffffff.png&amp;text=Client" />
-                                <div>
-                                    <h3>Arafat Khan</h3><span>Business Owner</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="tools">
-            <div class="container">
-                <div class="section-head reveal reveal-up"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Tech stack</span>
-                    <h2 class="section-title">Tools I use to build better websites.</h2>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool-card glass-card reveal reveal-up"><img alt="Webflow logo" class="tech-logo"
-                            src="Assets/Webflow_icon.svg" />
-                        <p>Webflow</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-up"><img alt="Webflow logo" class="tech-logo"
-                            src="Assets/shopify.svg"/>
-                        <p>Shopify</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-up"><img alt="Webflow logo" class="tech-logo"
-                            src="Assets/wordpress-icon.svg"/>
-                        <p>WordPress</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-zoom"><img alt="Figma logo" class="tech-logo"
-                            src="Assets/figma-icon.svg"/>
-                        <p>Figma</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-flip"><img alt="HTML logo" class="tech-logo"
-                            src="Assets/html.svg"/>
-                        <p>HTML</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-left"><img alt="CSS logo" class="tech-logo"
-                            src="Assets/css.svg"/>
-                        <p>CSS</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-up"><img alt="JavaScript logo" class="tech-logo"
-                            src="Assets/javascript.svg"/>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-right"><img alt="SEO logo" class="tech-logo"
-                            src="Assets/zapier.svg"/>
-                        <p>Zapier</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-right"><img alt="SEO logo" class="tech-logo"
-                            src="Assets/memberstack.svg"/>
-                        <p>MemberStack</p>
-                    </div>
-                    <div class="tool-card glass-card reveal reveal-right"><img alt="SEO logo" class="tech-logo"
-                            src="Assets/airtable.svg"/>
-                        <p>AirTable</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section skills-showcase" id="skills-showcase">
-            <div class="container">
-                <div class="skills-board glass-card reveal reveal-up">
-                    <div class="section-head reveal reveal-up"><span class="eyebrow"><img alt="" class="icon-img"
-                                src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> MY EXPERTISE</span>
-                        <h2 class="section-title">Development Expertise</h2>
-                    </div>
-                    <div class="skills-content-grid">
-                        <div class="skill-bars">
-                            <div class="skill-row" style="--value:95%">
-                                <div class="skill-row-top"><span>Webflow</span><span>95%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:90%">
-                                <div class="skill-row-top"><span>HTML</span><span>90%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:92%">
-                                <div class="skill-row-top"><span>CSS</span><span>92%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:60%">
-                                <div class="skill-row-top"><span>JavaScript</span><span>60%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:80%">
-                                <div class="skill-row-top"><span>WordPress</span><span>80%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
+                <!-- Section Header End -->
+
+                <!-- Process Steps Start -->
+                <div class="process-list">
+
+                    <article class="process-item reveal">
+                        <div class="process-icon">
+                            <img
+                                src="Assets/01-discover.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
                         </div>
-                        <div class="skill-bars">
-                            <div class="skill-row" style="--value:70%">
-                                <div class="skill-row-top"><span>Wix</span><span>70%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:85%">
-                                <div class="skill-row-top"><span>Finsweet</span><span>85%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:72%">
-                                <div class="skill-row-top"><span>GSAP</span><span>72%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:70%">
-                                <div class="skill-row-top"><span>MemberStack</span><span>80%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                            <div class="skill-row" style="--value:80%">
-                                <div class="skill-row-top"><span>Zapier</span><span>90%</span></div>
-                                <div class="skill-track"><span class="skill-fill"></span><span
-                                        class="skill-thumb"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-soft" id="faq">
-            <div class="container faq-container">
-                <div class="section-head reveal reveal-left"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> FAQ</span>
-                    <h2 class="section-title">Frequently asked questions.</h2>
-                </div>
-                <div class="faq-accordion reveal reveal-up">
-                    <div class="faq-panel active"><button class="faq-question" type="button"><span>Do you work with
-                                Webflow only?</span><strong></strong></button>
-                        <div class="faq-answer">
-                            <p>No, I work with both Webflow and frontend technologies like HTML, CSS, and JavaScript.
+
+                        <div class="process-content">
+                            <strong>01. Discover</strong>
+
+                            <p>
+                                We discuss your goals, pages, audience, references, and project requirements.
                             </p>
                         </div>
-                    </div>
-                    <div class="faq-panel"><button class="faq-question" type="button"><span>Can you make the site
-                                responsive?</span><strong></strong></button>
-                        <div class="faq-answer">
-                            <p>Yes, every section is designed for desktop, tablet, and mobile screens.</p>
+                    </article>
+
+                    <article class="process-item reveal reveal-delay-1">
+                        <div class="process-icon">
+                            <img
+                                src="Assets/02-plan-design.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
                         </div>
-                    </div>
-                    <div class="faq-panel"><button class="faq-question" type="button"><span>Can I update content
-                                later?</span><strong></strong></button>
-                        <div class="faq-answer">
-                            <p>Yes, CMS and reusable sections can be set up so you can update easily.</p>
+
+                        <div class="process-content">
+                            <strong>02. Plan &amp; Design</strong>
+
+                            <p>
+                                I plan sections, CMS needs, page flow, and conversion points.
+                            </p>
                         </div>
-                    </div>
-                    <div class="faq-panel"><button class="faq-question" type="button"><span>Do you provide support after
-                                launch?</span><strong></strong></button>
-                        <div class="faq-answer">
-                            <p>Yes, I can help with fixes, updates, and new sections after launch.</p>
+                    </article>
+
+                    <article class="process-item reveal reveal-delay-2">
+                        <div class="process-icon">
+                            <img
+                                src="Assets/03-build.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
                         </div>
-                    </div>
+
+                        <div class="process-content">
+                            <strong>03. Build</strong>
+
+                            <p>
+                                I develop the website with Webflow or frontend code.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="process-item reveal reveal-delay-3">
+                        <div class="process-icon">
+                            <img
+                                src="Assets/04-launch.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+                        </div>
+
+                        <div class="process-content">
+                            <strong>04. Launch</strong>
+
+                            <p>
+                                After final review, I help publish and hand over the project.
+                            </p>
+                        </div>
+                    </article>
+
                 </div>
+                <!-- Process Steps End -->
+
             </div>
         </section>
-        <section class="section contact" id="contact">
-            <div class="container contact-grid">
-                <div class="contact-info glass-card reveal reveal-left"><span class="eyebrow"><img alt=""
-                            class="icon-img" src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Contact</span>
-                    <h2 class="section-title">Have a project in mind?</h2>
-                    <p class="section-desc">Fill out the form and I will get your message.</p>
-                    <div class="contact-item"><img alt="" class="icon-img"
-                            src="Assets/email.svg" />
-                        <div><strong>Email</strong><a href="mailto:mdyasinjkt209@gmail.com">mdyasinjkt209@gmail.com</a>
+        <!-- =================================
+             PROCESS SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             TESTIMONIALS SECTION START
+        ================================== -->
+        <section
+            class="section testimonials-section"
+            id="testimonials"
+        >
+            <div class="container testimonial-layout">
+
+                <div class="testimonial-main">
+
+                    <!-- Section Header Start -->
+                    <div class="section-header reveal">
+                        <div class="section-kicker">
+                            <span></span>
+                            Testimonials
                         </div>
+
+                        <h2>
+                            What clients say about working with me.
+                        </h2>
+
+                        <p>
+                            Client satisfaction is my top priority.
+                        </p>
                     </div>
-                    <div class="contact-item"><img alt="" class="icon-img"
-                            src="Assets/location.svg" />
-                        <div><strong>Location</strong>Bangladesh / Remote Worldwide</div>
+                    <!-- Section Header End -->
+
+                    <!-- Testimonial Slider Start -->
+                    <div
+                        class="testimonial-slider reveal"
+                        id="testimonialSlider"
+                        aria-label="Client testimonials"
+                    >
+                        <div class="testimonial-slider-viewport">
+                            <div class="testimonial-slider-track">
+
+                                <!-- Testimonial Slide Start -->
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            "Great guy! Very happy to work with Yasin. For almost 8 months, he has been my number 1 freelancer!!!"
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-rakib-hasan.jpg"
+                                                alt="Rakib Hasan"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>Rakib Hasan</strong>
+                                                <span>CEO, Brikenic</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            Yasin was proactive in communication, quick to address feedback, and always willing to go the extra mile to ensure everything was implemented correctly. His attention to detail and problem solving ability stood out, especially when handling complex interactions and responsiveness across devices.
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-arifin-babu.jpg"
+                                                alt="Arifin Babu"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>Arifin Babu</strong>
+                                                <span>
+                                                    Product Manager,
+                                                    Dhaka Studio
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            "Amazing freelancer. Extremely patient with me as I took several weeks to close the contract due to personal reasons but Rabiul was very understanding! He is fantastic at this job and very skilled Webflow developer. Gets things done immediately! Highly recommend and will work with him again!"
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-simon.jpg"
+                                                alt="Simon"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>Simon</strong>
+                                                <span>Founder, Creative Studio</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            "Excellent Webflow skills and
+                                            responsive communication. The final
+                                            website looks premium and performs
+                                            very well."
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-john-smith.jpg"
+                                                alt="John Smith"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>John Smith</strong>
+                                                <span>Marketing Director</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            "Yasin communicated excellently, and was readily available to help us. Unfortunately the issue we needed to resolve was outside of his expertise. We thank him for his effort."
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-john-smith.jpg"
+                                                alt="John Smith"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>John Smith</strong>
+                                                <span>Marketing Director</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="testimonial-slide">
+                                    <div class="testimonial-card">
+                                        <div
+                                            class="testimonial-stars"
+                                            aria-label="5 out of 5 stars"
+                                        >
+                                            ★★★★★
+                                        </div>
+
+                                        <p class="testimonial-message">
+                                            "It was an about pleasure working with Yasin. Great communication and quality work.Would definitely hire him again."
+                                        </p>
+
+                                        <div class="testimonial-person">
+                                            <img
+                                                src="Assets/client-john-smith.jpg"
+                                                alt="John Smith"
+                                                class="testimonial-avatar"
+                                            >
+
+                                            <div class="testimonial-person-info">
+                                                <strong>John Smith</strong>
+                                                <span>Marketing Director</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Testimonial Slide End -->
+
+                            </div>
+                        </div>
+
+                        <!-- Slider Navigation Start -->
+                        <div class="testimonial-slider-navigation">
+
+                            <div
+                                class="testimonial-slider-dots"
+                                aria-label="Testimonial pagination"
+                            ></div>
+
+                            <div class="testimonial-slider-buttons">
+
+                                <button
+                                    class="testimonial-arrow testimonial-previous"
+                                    type="button"
+                                    aria-label="Previous testimonials"
+                                >
+                                    <img
+                                        src="Assets/prev Icon.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </button>
+
+                                <button
+                                    class="testimonial-arrow testimonial-next"
+                                    type="button"
+                                    aria-label="Next testimonials"
+                                >
+                                    <img
+                                        src="Assets/next-arrow-dark.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </button>
+
+                            </div>
+
+                        </div>
+                        <!-- Slider Navigation End -->
+
                     </div>
-                    <div class="contact-item"><img alt="" class="icon-img"
-                            src="Assets/service.svg" />
-                        <div><strong>Service</strong>Webflow, Frontend, CMS, Landing Pages</div>
-                    </div>
-                    <div class="map-box"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d321.90366060588343!2d90.4316899653348!3d24.104161641976727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1780399665189!5m2!1sen!2sbd"
-                            title="Pinned Google Map Location"></iframe><a class="map-link"
-                            href="https://maps.app.goo.gl/Wp8de1m2frB6iMQT7" rel="noopener" target="_blank">Open Google
-                            Map</a></div>
+                    <!-- Testimonial Slider End -->
+
                 </div>
-                <form class="contact-form glass-card reveal reveal-right" id="contactForm" novalidate="" netlify data-netlify="true">
+
+
+                <!-- Testimonial CTA Start -->
+                <aside class="testimonial-cta-card reveal reveal-right">
+
+                    <div class="section-kicker">
+                        <span></span>
+                        Let's work together
+                    </div>
+
+                    <h2>
+                        Have a project in mind?
+                    </h2>
+
+                    <p>
+                        I’m available for freelance projects. Let’s discuss
+                        your project and build something amazing together.
+                    </p>
+
+                    <ul class="testimonial-cta-list">
+                        <li>
+                            <img
+                                src="Assets/fast-response.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+
+                            <span>Fast response</span>
+                        </li>
+
+                        <li>
+                            <img
+                                src="Assets/clear-communication.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+
+                            <span>Clear communication</span>
+                        </li>
+
+                        <li>
+                            <img
+                                src="Assets/on-time-delivery.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+
+                            <span>On-time delivery</span>
+                        </li>
+                    </ul>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-primary"
+                    >
+                        Get In Touch
+
+                        <span class="btn-icon-wrap">
+                            <img
+                                src="Assets/next-arrow-light.svg"
+                                alt=""
+                                class="btn-icon"
+                                aria-hidden="true"
+                            >
+                        </span>
+                    </a>
+
+                </aside>
+                <!-- Testimonial CTA End -->
+
+            </div>
+        </section>
+        <!-- =================================
+             TESTIMONIALS SECTION END
+        ================================== -->
+
+        <!-- =================================
+        TOOLS MARQUEE SECTION START
+        ================================= -->
+        <section
+            class="section tools-section"
+            id="tools"
+        >
+            <div class="container">
+
+                <!-- Tools Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        Tools
+                    </div>
+
+                    <h2>
+                        Tools I use to build better websites.
+                    </h2>
+
+                    <p>
+                        These tools help me design, develop and deliver
+                        high-quality websites.
+                    </p>
+                </div>
+                <!-- Tools Section Header End -->
+
+
+                <!-- Tools Marquee Start -->
+                <div
+                    class="tools-marquee reveal"
+                    id="toolsMarquee"
+                    aria-label="Tools and technologies I use"
+                >
+                    <!-- Left Fade Start -->
+                    <div
+                        class="tools-marquee-fade tools-marquee-fade-left"
+                        aria-hidden="true"
+                    ></div>
+                    <!-- Left Fade End -->
+
+                    <!-- Right Fade Start -->
+                    <div
+                        class="tools-marquee-fade tools-marquee-fade-right"
+                        aria-hidden="true"
+                    ></div>
+                    <!-- Right Fade End -->
+
+
+                    <!-- Moving Track Start -->
+                    <div class="tools-track">
+
+                        <!-- Original Tools Group Start -->
+                        <div class="tools-group">
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Webflow"
+                            >
+                                <img
+                                    src="Assets/Webflow_icon.svg"
+                                    alt="Webflow"
+                                >
+
+                                <span>Webflow</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Figma"
+                            >
+                                <img
+                                    src="Assets/figma-icon.svg"
+                                    alt="Figma"
+                                >
+
+                                <span>Figma</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Visual Studio Code"
+                            >
+                                <img
+                                    src="Assets/Visual Studio Code (VS Code).svg"
+                                    alt="Visual Studio Code"
+                                >
+
+                                <span>VS Code</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="JavaScript"
+                            >
+                                <img
+                                    src="Assets/javascript.svg"
+                                    alt="JavaScript"
+                                >
+
+                                <span>JavaScript</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="HTML5"
+                            >
+                                <img
+                                    src="Assets/html.svg"
+                                    alt="HTML5"
+                                >
+
+                                <span>HTML5</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="CSS3"
+                            >
+                                <img
+                                    src="Assets/css.svg"
+                                    alt="CSS3"
+                                >
+
+                                <span>CSS3</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Zapier"
+                            >
+                                <img
+                                    src="Assets/zapier.svg"
+                                    alt="Zapier"
+                                >
+
+                                <span>Zapier</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Airtable"
+                            >
+                                <img
+                                    src="Assets/airtable.svg"
+                                    alt="Airtable"
+                                >
+
+                                <span>Airtable</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="Memberstack"
+                            >
+                                <img
+                                    src="Assets/memberstack.svg"
+                                    alt="Memberstack"
+                                >
+
+                                <span>Memberstack</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+
+                            <!-- Tool Item Start -->
+                            <div
+                                class="tool-item"
+                                data-tooltip="WordPress"
+                            >
+                                <img
+                                    src="Assets/wordpress-icon.svg"
+                                    alt="WordPress"
+                                >
+
+                                <span>WordPress</span>
+                            </div>
+                            <!-- Tool Item End -->
+
+                        </div>
+                        <!-- Original Tools Group End -->
+
+                    </div>
+                    <!-- Moving Track End -->
+
+                </div>
+                <!-- Tools Marquee End -->
+
+            </div>
+        </section>
+        <!-- =================================
+            TOOLS MARQUEE SECTION END
+        ================================= -->
+
+
+        <!-- =================================
+             EXPERTISE SECTION START
+        ================================== -->
+        <section
+            class="section expertise-section"
+            id="expertise"
+        >
+            <div class="container">
+
+                <!-- Section Header Start -->
+                <div class="section-header reveal">
+                    <div class="section-kicker">
+                        <span></span>
+                        Expertise
+                    </div>
+
+                    <h2>My development expertise and skills.</h2>
+
+                    <p>
+                        Years of experience in building modern and
+                        high-performance web solutions.
+                    </p>
+                </div>
+                <!-- Section Header End -->
+
+                <!-- Skills Grid Start -->
+                <div class="skills-grid reveal">
+
+                    <div class="skills-column">
+
+                        <div class="skill-item" data-value="95">
+                            <div class="skill-information">
+                                <span>Webflow</span>
+                                <strong>95%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="90">
+                            <div class="skill-information">
+                                <span>HTML</span>
+                                <strong>90%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="92">
+                            <div class="skill-information">
+                                <span>CSS</span>
+                                <strong>92%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="60">
+                            <div class="skill-information">
+                                <span>JavaScript</span>
+                                <strong>60%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="80">
+                            <div class="skill-information">
+                                <span>WordPress</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skills-column">
+
+                        <div class="skill-item" data-value="70">
+                            <div class="skill-information">
+                                <span>Wix</span>
+                                <strong>70%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="85">
+                            <div class="skill-information">
+                                <span>Finsweet</span>
+                                <strong>85%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="72">
+                            <div class="skill-information">
+                                <span>GSAP</span>
+                                <strong>72%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="80">
+                            <div class="skill-information">
+                                <span>Memberstack</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-value="90">
+                            <div class="skill-information">
+                                <span>Zapier</span>
+                                <strong>90%</strong>
+                            </div>
+
+                            <div class="skill-track">
+                                <span class="skill-progress"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Skills Grid End -->
+
+            </div>
+        </section>
+        <!-- =================================
+             EXPERTISE SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             FAQ AND FORM SECTION START
+        ================================== -->
+        <section
+            class="section faq-form-section"
+            id="faq"
+        >
+            <div class="container faq-form-layout">
+
+                <!-- FAQ Column Start -->
+                <div class="faq-column">
+
+                    <div class="section-header reveal">
+                        <div class="section-kicker">
+                            <span></span>
+                            FAQ
+                        </div>
+
+                        <h2>Frequently asked questions.</h2>
+
+                        <p>
+                            Find answers to some common questions.
+                        </p>
+                    </div>
+
+                    <div
+                        class="faq-list reveal"
+                        id="faqAccordion"
+                    >
+
+                        <!-- FAQ Item Start -->
+                        <article class="faq-item is-open">
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="true"
+                            >
+                                <span>
+                                    Do you work with Webflow only?
+                                </span>
+
+                                <img
+                                    src="Assets/Plus Icon.png"
+                                    alt=""
+                                    class="faq-icon"
+                                    aria-hidden="true"
+                                >
+                            </button>
+
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        No, I work with both Webflow and frontend technologies like HTML, CSS, and JavaScript.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <article class="faq-item">
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>
+                                    Can you make the site responsive?
+                                </span>
+
+                                <img
+                                    src="Assets/Plus Icon.png"
+                                    alt=""
+                                    class="faq-icon"
+                                    aria-hidden="true"
+                                >
+                            </button>
+
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Yes, every section is designed for desktop, tablet, and mobile screens.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <article class="faq-item">
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>
+                                    Can I update content later?
+                                </span>
+
+                                <img
+                                    src="Assets/Plus Icon.png"
+                                    alt=""
+                                    class="faq-icon"
+                                    aria-hidden="true"
+                                >
+                            </button>
+
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Yes, CMS and reusable sections can be set up so you can update easily.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <article class="faq-item">
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>
+                                    Do you provide support after launch?
+                                </span>
+
+                                <img
+                                    src="Assets/Plus Icon.png"
+                                    alt=""
+                                    class="faq-icon"
+                                    aria-hidden="true"
+                                >
+                            </button>
+
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>
+                                        Yes. I provide post-launch support,
+                                        maintenance and website update services.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- FAQ Item End -->
+
+                    </div>
+
+                </div>
+                <!-- FAQ Column End -->
+
+
+                <!-- Netlify Contact Form Start -->
+                <form
+                    class="contact-form glass-card reveal reveal-right"
+                    id="contactForm"
+                    name="portfolio-contact"
+                    method="POST"
+                    action="/"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    novalidate
+                >
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="portfolio-contact"
+                    >
+
+                    <p
+                        class="netlify-hidden-field"
+                        aria-hidden="true"
+                    >
+                        <label>
+                            Do not fill this field:
+                            <input name="bot-field">
+                        </label>
+                    </p>
+
                     <div class="form-grid">
-                        <div class="form-group"><label for="name">Name : </label><input id="name" name="name"
-                                placeholder="John Doe" required="" type="text" /></div>
-                        <div class="form-group"><label for="email">Email : </label><input id="email" name="email"
-                                placeholder="john@example.com" required="" type="email" /></div>
-                        <div class="form-group"><label for="phone">Phone Number : </label><input id="phone" inputmode="tel"
-                                name="phone" pattern="^[+]?[0-9]{7,15}$" placeholder="+8801712345678" required=""
-                                title="Please enter numbers only. You can use + at the beginning." type="tel" /></div>
-                        <div class="form-group"><label for="budget">Project Budget : </label><input id="budget"
-                                name="budget" placeholder="$500 - $1500" type="text" required="" /></div>
-                        <div class="form-group full">
-                            <label for="service">Service Needed : </label>
-                            <select id="service" name="service" required>
-                                <option value="" disabled selected>Select a service</option>
-                                <option value="Webflow Development">Webflow Development</option>
-                                <option value="Frontend Development">Frontend Development</option>
-                                <option value="WordPress Development">WordPress Development</option>
-                                <option value="Shopify Development">Shopify Development</option>
-                                <option value="CMS Development">CMS Development</option>
-                                <option value="Website Redesign">Website Redesign</option>
-                                <option value="Landing Page">Landing Page</option>
-                                <option value="Other">Other</option>
-                            </select>
+
+                        <!-- Name Field Start -->
+                        <div class="form-group">
+                            <label for="name">
+                                Name <span>*</span>
+                            </label>
+
+                            <input
+                                id="name"
+                                name="name"
+                                placeholder="John Doe"
+                                required
+                                type="text"
+                                autocomplete="name"
+                            >
+
+                            <small class="form-error"></small>
                         </div>
-                        <div class="form-group full"><label for="message">Project Details : </label><textarea id="message"
-                                name="message" placeholder="Tell me about your project..." required=""></textarea></div>
-                        <div class="form-group full"><button class="btn btn-primary" id="submitBtn" type="submit">Send
-                                Message <span class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                        src="Assets/next-arrow-light.svg" /><img alt="" class="arrow-img arrow-img-dark"
-                                        src="Assets/next-arrow-light.svg" /></span></button>
-                            <p class="form-success" id="formSuccess">Thank you! Your message has been submitted
-                                successfully.</p>
+                        <!-- Name Field End -->
+
+                        <!-- Email Field Start -->
+                        <div class="form-group">
+                            <label for="email">
+                                Email <span>*</span>
+                            </label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                placeholder="john@example.com"
+                                required
+                                type="email"
+                                autocomplete="email"
+                            >
+
+                            <small class="form-error"></small>
                         </div>
+                        <!-- Email Field End -->
+
+                        <!-- Phone Field Start -->
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <input
+                                id="phone"
+                                inputmode="tel"
+                                name="phone"
+                                pattern="^[+]?[0-9]{7,15}$"
+                                placeholder="+8801712345678"
+                                required
+                                title="Please enter numbers only. You can use + at the beginning."
+                                type="tel"
+                                autocomplete="tel"
+                            >
+
+                            <small class="form-error"></small>
+                        </div>
+                        <!-- Phone Field End -->
+
+                        <!-- Budget Field Start -->
+                        <div class="form-group">
+                            <label for="budget">
+                                Project Budget <span>*</span>
+                            </label>
+
+                            <input
+                                id="budget"
+                                name="budget"
+                                placeholder="$500 - $1500"
+                                type="text"
+                                required
+                            >
+
+                            <small class="form-error"></small>
+                        </div>
+                        <!-- Budget Field End -->
+
+                        <!-- Service Field Start -->
+                        <div class="form-group form-group-full">
+                            <label for="service">
+                                Service Needed <span>*</span>
+                            </label>
+
+                            <div class="select-wrapper">
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Select a service
+                                    </option>
+
+                                    <option value="Webflow Development">
+                                        Webflow Development
+                                    </option>
+
+                                    <option value="Frontend Development">
+                                        Frontend Development
+                                    </option>
+
+                                    <option value="WordPress Development">
+                                        WordPress Development
+                                    </option>
+
+                                    <option value="Shopify Development">
+                                        Shopify Development
+                                    </option>
+
+                                    <option value="CMS Development">
+                                        CMS Development
+                                    </option>
+
+                                    <option value="Website Redesign">
+                                        Website Redesign
+                                    </option>
+
+                                    <option value="Landing Page">
+                                        Landing Page
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+                                </select>
+
+                                <img
+                                    src="Assets/select-arrow.svg"
+                                    alt=""
+                                    class="select-icon"
+                                    aria-hidden="true"
+                                >
+                            </div>
+
+                            <small class="form-error"></small>
+                        </div>
+                        <!-- Service Field End -->
+
+                        <!-- Message Field Start -->
+                        <div class="form-group form-group-full">
+                            <label for="message">
+                                Project Details <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell me about your project..."
+                                required
+                            ></textarea>
+
+                            <small class="form-error"></small>
+                        </div>
+                        <!-- Message Field End -->
+
+                        <!-- Submit Button Start -->
+                        <div class="form-group form-group-full">
+                            <button
+                                class="btn btn-primary form-submit-button"
+                                id="submitBtn"
+                                type="submit"
+                            >
+                                <span class="submit-button-text">
+                                    Send Message
+                                </span>
+
+                                <span class="btn-icon-wrap">
+                                    <img
+                                        src="Assets/next-arrow-light.svg"
+                                        alt=""
+                                        class="btn-icon"
+                                        aria-hidden="true"
+                                    >
+                                </span>
+                            </button>
+
+                            <p
+                                class="form-message form-success"
+                                id="formSuccess"
+                                role="status"
+                                aria-live="polite"
+                            >
+                                Thank you! Your message has been submitted
+                                successfully.
+                            </p>
+
+                            <p
+                                class="form-message form-submit-error"
+                                id="formSubmitError"
+                                role="alert"
+                                aria-live="assertive"
+                            >
+                                Something went wrong. Please try again.
+                            </p>
+                        </div>
+                        <!-- Submit Button End -->
+
                     </div>
                 </form>
+                <!-- Netlify Contact Form End -->
+
             </div>
         </section>
-        <section class="section">
+        <!-- =================================
+             FAQ AND FORM SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             CONTACT SECTION START
+        ================================== -->
+        <section
+            class="section contact-section"
+            id="contact"
+        >
             <div class="container">
-                <div class="cta-card glass-card reveal reveal-zoom"><span class="eyebrow"><img alt="" class="icon-img"
-                            src="https://dummyimage.com/20x20/00d4ff/00d4ff.png" /> Ready to start?</span>
-                    <h2>Let’s build a website that makes your brand 
-                        look premium.</h2>
-                    <p>Send your project details, design file, or reference website and I will help you turn it into a
-                        clean, responsive website.</p><a class="btn btn-primary" href="#contact">Book a Project <span
-                            class="btn-arrow-wrap"><img alt="" class="arrow-img arrow-img-light"
-                                src="Assets/next-arrow-light.svg" /><img alt="" class="arrow-img arrow-img-dark"
-                                src="Assets/next-arrow-light.svg" /></span></a>
+
+                <div class="contact-panel glass-card reveal">
+
+                    <!-- Contact Information Start -->
+                    <div class="contact-information">
+
+                        <div class="section-kicker">
+                            <span></span>
+                            Contact
+                        </div>
+
+                        <h2>Let’s discuss your project.</h2>
+
+                        <p>
+                            I’m available for new projects and collaborations.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-icon">
+                                    <img
+                                        src="Assets/email.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
+
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:mdyasinjkt209@gmail.com">
+                                        mdyasinjkt209@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-icon">
+                                    <img
+                                        src="Assets/location icon.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
+
+                                <div>
+                                    <strong>Location</strong>
+                                    <span>Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-icon">
+                                    <img
+                                        src="Assets/available.png"
+                                        alt=""
+                                        aria-hidden="true"
+                                    >
+                                </span>
+
+                                <div>
+                                    <strong>Availability</strong>
+                                    <span>Available for new projects</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <strong class="follow-heading">Follow Me</strong>
+
+                        <div class="social-links">
+
+                            <a
+                                href="https://www.facebook.com/md.yasinhossain.5245"
+                                aria-label="Facebook" target="_blank"
+                            >
+                                <img
+                                    src="Assets/facebook.png"
+                                    alt="Facebook"
+                                    aria-hidden="true"
+                                >
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/@YasinStack"
+                                aria-label="Youtube" target="_blank"
+                            >
+                                <img
+                                    src="Assets/youtube.png"
+                                    alt="Youtube"
+                                    aria-hidden="true"
+                                >
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Contact Information End -->
+
+
+                    <!-- Map Start -->
+                    <div class="contact-map">
+                        <!--<img
+                            src="Assets/bangladesh-map.jpg"
+                            alt="Map showing Dhaka, Bangladesh"
+                        >-->
+                        <!-- Contact Map Start -->
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d227.62012665297075!2d90.43177263866362!3d24.104237397384342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d24.104242799999998!2d90.4319472!4m3!3m2!1d24.1042451!2d90.43194679999999!5e0!3m2!1sen!2sbd!4v1783925260220!5m2!1sen!2sbd"
+                title="My location on Google Maps"
+                aria-label="Google Maps showing my location"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+        </div>
+        <!-- Contact Map End -->
+                    </div>
+                    <!-- Map End -->
+
                 </div>
+
             </div>
         </section>
+        <!-- =================================
+             CONTACT SECTION END
+        ================================== -->
+
+
+        <!-- =================================
+             FINAL CTA SECTION START
+        ================================== -->
+        <section class="section final-cta-section">
+            <div class="container">
+
+                <div class="final-cta reveal">
+                    <h2>
+                        Let’s build a website that makes your brand look
+                        premium.
+                    </h2>
+
+                    <p>
+                        Send your project details, design file, or reference website and I will help you turn it into a clean, responsive website.
+                    </p>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-light"
+                    >
+                        Start a Project
+
+                        <span class="btn-icon-wrap">
+                            <img
+                                src="Assets/next-arrow-dark.png"
+                                alt=""
+                                class="btn-icon"
+                                aria-hidden="true"
+                            >
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!-- =================================
+             FINAL CTA SECTION END
+        ================================== -->
+
     </main>
-    <footer class="footer">
+    <!-- =================================
+         FOOTER SECTION START
+    ================================== -->
+    <footer class="site-footer">
         <div class="container footer-content">
-            <p>© <span id="year"></span> Yasin.dev. All rights reserved.</p>
-            <div class="footer-links"><a href="#home">Home</a><a href="#projects">Projects</a><a
-                    href="#contact">Contact</a></div>
+
+            <a
+                href="#home"
+                class="site-logo"
+                aria-label="Yasin.dev home"
+            >
+                <img
+                    src="Assets/yasin-dev-logo.svg"
+                    alt=""
+                    class="site-logo-icon"
+                    aria-hidden="true"
+                >
+            </a>
+
+            <p>
+                © 2026 Yasin.dev. All rights reserved.
+            </p>
+
+            <div class="footer-social-links">
+
+               <a
+                                href="https://www.facebook.com/md.yasinhossain.5245"
+                                aria-label="Facebook" target="_blank"
+                            >
+                                <img
+                                    src="Assets/facebook.png"
+                                    alt="Facebook"
+                                    aria-hidden="true"
+                                >
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/@YasinStack"
+                                aria-label="Youtube" target="_blank"
+                            >
+                                <img
+                                    src="Assets/youtube.png"
+                                    alt="Youtube"
+                                    aria-hidden="true"
+                                >
+                            </a>
+            </div>
+
+            <div class="footer-legal-links">
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
         </div>
     </footer>
-    <button aria-label="Back to top" class="back-to-top" id="backToTop" type="button"><img alt="" class="backtop-img"
-            src="Assets/up-arrow-black.png" /></button>
+    <!-- =================================
+         FOOTER SECTION END
+    ================================== -->
+
+    <!-- ================================
+     FLOATING CONTACT BUTTON START
+================================= -->
+    <div
+        class="floating-contact collapsed"
+        id="floatingContact"
+    >
+        <!-- Call Button Start -->
+        <a
+            class="floating-contact-action floating-contact-call"
+            href="tel:+8801609894871"
+            aria-label="Call me"
+            title="Call me"
+        >
+            <img
+                src="Assets/phone-call.png"
+                alt=""
+                aria-hidden="true"
+            >
+        </a>
+        <!-- Call Button End -->
+
+        <!-- WhatsApp Button Start -->
+        <a
+            class="floating-contact-action floating-contact-whatsapp"
+            href="https://wa.me/8801609894871?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20website%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact me on WhatsApp"
+            title="Contact me on WhatsApp"
+        >
+            <img
+                src="Assets/whatsapp.png"
+                alt=""
+                aria-hidden="true"
+            >
+        </a>
+        <!-- WhatsApp Button End -->
+
+        <!-- Main Toggle Button Start -->
+        <button
+            class="floating-contact-main"
+            id="floatingContactButton"
+            type="button"
+            aria-label="Open contact options"
+            aria-expanded="false"
+            aria-controls="floatingContact"
+        >
+            <span class="floating-contact-main-icon">
+                <img
+                    src="Assets/Plus Icon.png"
+                    alt=""
+                    aria-hidden="true"
+                >
+            </span>
+        </button>
+        <!-- Main Toggle Button End -->
+    </div>
+    <!-- ================================
+        FLOATING CONTACT BUTTON END
+    ================================= -->
     <script src="Program.js"></script>
 </body>
 
