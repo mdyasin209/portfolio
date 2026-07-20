@@ -1142,3 +1142,193 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =================================
    TOOLS MARQUEE JS END
 ================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+   Services JS Start
+================================= */
+const services = [
+  { title:"Webflow Development", body:"Responsive Webflow builds with clean structure and smooth animations.", color:"blue",
+    img:"Assets/Webflow_icon.svg" },
+  { title:"Frontend Development", body:"Modern HTML, CSS, and JavaScript interfaces.", color:"pink",
+    img:"Assets/frontend-development.svg" },
+  { title:"CMS & Dynamic Websites", body:"CMS collections for blogs, projects, teams, and resources.", color:"green",
+    img:"Assets/cms-setup.svg" },
+  { title:"Website Redesign", body:"Modern redesigns that improve trust, flow, and usability.", color:"purple",
+    img:"Assets/website-redesign.svg" },
+  { title:"SEO Basics", body:"Meta, heading, image, and page structure optimization.", color:"yellow",
+    img:"Assets/seo-basics.svg" },
+  { title:"Maintenance", body:"Updates, bug fixes, new sections, and ongoing improvements.", color:"blue",
+    img:"Assets/maintenance.svg" },
+];
+
+const n = services.length;
+const stepDeg = 40;
+const stage = document.getElementById('stage');
+const dotsWrap = document.getElementById('dots');
+let center = 0;
+let animating = false;
+
+// build persistent slot/card elements once — this is key to a real
+// "rotate" feel: the same DOM node swings from one angle to the next
+// instead of being re-created, so the browser tweens the arc motion.
+const slots = services.map((s, i) => {
+  const slot = document.createElement('div');
+  slot.className = 'slot';
+  slot.innerHTML = `
+    <div class="card">
+      <div class="services-card-icon-wrap service-icon icon-bg-${s.color}">
+        <img src="${s.img}" alt="" aria-hidden="true">
+      </div>
+      <h3>${s.title}</h3>
+      <p>${s.body}</p>
+      
+    </div>
+  `;
+  stage.appendChild(slot);
+  return slot;
+});
+
+function shortestOffset(i, c){
+  let raw = i - c;
+  const half = n / 2;
+  while (raw > half) raw -= n;
+  while (raw <= -half) raw += n;
+  return raw;
+}
+
+function layout(){
+  slots.forEach((slot, i) => {
+    const offset = shortestOffset(i, center);
+    const angle = offset * stepDeg;
+    const abs = Math.abs(offset);
+
+    slot.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+    slot.style.zIndex = 10 - abs;
+    slot.classList.toggle('is-center', offset === 0);
+
+    const card = slot.querySelector('.card');
+    const scale = Math.max(0.78, 1 - abs * 0.08);
+    const opacity = abs === 0 ? 1 : abs === 1 ? 1 : abs === 2 ? 0.22 : 0;
+    card.style.transform = `scale(${scale})`;
+    card.style.opacity = opacity;
+    card.style.pointerEvents = abs >= 2 ? 'none' : 'auto';
+  });
+  renderDots();
+}
+
+function renderDots(){
+  dotsWrap.innerHTML = '';
+  services.forEach((_, i) => {
+    const b = document.createElement('button');
+    b.className = i === center ? 'active' : '';
+    b.setAttribute('aria-label', 'View service ' + (i + 1));
+    b.addEventListener('click', () => { goTo(i); restartAuto(); });
+    dotsWrap.appendChild(b);
+  });
+  curveIndicator();
+}
+
+// bows the whole prev-arrow / dots / next-arrow row into a shallow
+// arc so it echoes the dome's curve, instead of sitting dead flat.
+function curveIndicator(){
+  const items = document.querySelectorAll('#indicator > .nav-btn, #indicator .dots button');
+  const count = items.length;
+  const center = (count - 1) / 2;
+  const w = window.innerWidth;
+  const factor = w < 420 ? 1.3 : w < 720 ? 1.7 : 2.0;
+
+  items.forEach((el, i) => {
+    const d = i - center;
+    const dip = (d * d * factor).toFixed(1);
+    const scale = el.classList.contains('active') ? ' scale(1.9)' : '';
+    el.style.transform = `translateY(${dip}px)${scale}`;
+  });
+}
+
+window.addEventListener('resize', curveIndicator);
+
+function slide(dir){
+  if (animating) return;
+  animating = true;
+  center = ((center + dir) % n + n) % n;
+  layout();
+  setTimeout(() => { animating = false; }, 760);
+}
+
+function goTo(i){
+  if (animating || i === center) return;
+  animating = true;
+  center = i;
+  layout();
+  setTimeout(() => { animating = false; }, 760);
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => { slide(1); restartAuto(); });
+document.getElementById('prevBtn').addEventListener('click', () => { slide(-1); restartAuto(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') { slide(1); restartAuto(); }
+  if (e.key === 'ArrowLeft') { slide(-1); restartAuto(); }
+});
+
+// ---- autoplay: loops forever, pauses on card hover ----
+const AUTO_DELAY = 3200;
+let autoTimer = null;
+let paused = false;
+
+function startAuto(){
+  stopAuto();
+  autoTimer = setInterval(() => {
+    if (!paused) slide(1);
+  }, AUTO_DELAY);
+}
+function stopAuto(){
+  if (autoTimer) clearInterval(autoTimer);
+  autoTimer = null;
+}
+function restartAuto(){
+  startAuto();
+}
+
+stage.addEventListener('mouseenter', () => { paused = true; });
+stage.addEventListener('mouseleave', () => { paused = false; });
+stage.addEventListener('focusin', () => { paused = true; });
+stage.addEventListener('focusout', () => { paused = false; });
+
+// touch swipe — mobile has no hover, so this is the mobile equivalent
+let touchStartX = null;
+stage.addEventListener('touchstart', (e) => {
+  paused = true;
+  touchStartX = e.touches[0].clientX;
+}, { passive: true });
+
+stage.addEventListener('touchend', (e) => {
+  if (touchStartX !== null){
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40){
+      slide(dx < 0 ? 1 : -1);
+    }
+  }
+  touchStartX = null;
+  paused = false;
+  restartAuto();
+}, { passive: true });
+
+layout();
+startAuto();
+/* =================================
+   Services JS End
+================================= */
+

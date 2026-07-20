@@ -27,7 +27,7 @@
     <meta name="twitter:description" content="Webflow and frontend developer from Bangladesh specializing in Figma to Webflow, CMS, responsive websites, animations, and full website development.">
     <meta name="twitter:image" content="https://imyasin.dev/Assets/twitter-card.png">
 </head>
-<body data-theme="dark">
+<body >
    
     <!-- =================================
          HEADER SECTION START
@@ -220,8 +220,7 @@
                             </span>
 
                             <span>
-                                Webflow<br>
-                                Development
+                                Webflow Development
                             </span>
                         </div>
 
@@ -235,8 +234,7 @@
                             </span>
 
                             <span>
-                                Frontend<br>
-                                Interfaces
+                                Frontend Interfaces
                             </span>
                         </div>
 
@@ -250,23 +248,7 @@
                             </span>
 
                             <span>
-                                Responsive<br>
-                                Design
-                            </span>
-                        </div>
-
-                        <div class="hero-feature">
-                            <span class="hero-feature-icon">
-                                <img
-                                    src="Assets/cms-icon.svg"
-                                    alt=""
-                                    aria-hidden="true"
-                                >
-                            </span>
-
-                            <span>
-                                CMS &amp;<br>
-                                Collections
+                                Responsive Design
                             </span>
                         </div>
 
@@ -280,8 +262,21 @@
                             </span>
 
                             <span>
-                                Custom Code &amp;<br>
-                                Animations
+                                CMS &amp; Collections
+                            </span>
+                        </div>
+
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">
+                                <img
+                                    src="Assets/cms-setup.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+                            </span>
+
+                            <span>
+                                Custom Code &amp; Animations
                             </span>
                         </div>
 
@@ -309,7 +304,7 @@
 
                     <div class="hero-floating-card">
                         <strong>
-                            Webflow Developer &amp;<br>
+                            Webflow Developer &amp;
                             Frontend Builder
                         </strong>
 
@@ -339,7 +334,7 @@
 
                     <div class="section-kicker">
                         <span></span>
-                        Trusted by demo brands
+                        Trusted by
                     </div>
 
                     <p class="brand-description">
@@ -613,136 +608,31 @@
         <!-- =================================
              SERVICES SECTION START
         ================================== -->
-        <section
-            class="section services-section"
-            id="services"
-        >
+       
+        <section class="section section-bg-light">
             <div class="container">
+                <div class="wrap">
+                    <div class="section-kicker">Services</div>
+                    <h2 class="heading">Everything you need to launch a <span>professional</span> Webflow or frontend website.</h2>
+                    <p class="subheading">From design to development, I provide end-to-end solutions for modern websites.</p>
+            
+                    <div class="stage" id="stage"></div>
 
-                <!-- Section Header Start -->
-                <div class="section-header reveal">
-                    <div class="section-kicker">
-                        <span></span>
-                        Services
+                    <div class="indicator" id="indicator">
+                        <button style="display: none;" class="nav-btn" id="prevBtn" aria-label="Previous service">←</button>
+                        <div class="dots" id="dots"></div>
+                        <button style="display: none;" class="nav-btn" id="nextBtn" aria-label="Next service">→</button>
                     </div>
 
-                    <h2>
-                        Everything you need to launch a
-                        <span>professional</span>
-                        Webflow or frontend website.
-                    </h2>
-
-                    <p>
-                        From design to development, I provide end-to-end
-                        solutions for modern websites.
-                    </p>
+                    <div class="dome-holder">
+                        <div class="dome">
+                        <h2>Services</h2>
+                        </div>
+                    </div>
                 </div>
-                <!-- Section Header End -->
-
-                <!-- Services Grid Start -->
-                <div class="services-grid">
-
-                    <article class="service-card reveal">
-                        <div class="service-icon icon-background-blue">
-                            <img
-                                src="Assets/Webflow_icon.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>Webflow Development</h3>
-
-                        <p>
-                            Responsive Webflow builds with clean structure and smooth animations.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal reveal-delay-1">
-                        <div class="service-icon icon-background-pink">
-                            <img
-                                src="Assets/frontend-development.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>Frontend Development</h3>
-
-                        <p>
-                            Modern HTML, CSS, and JavaScript interfaces.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal reveal-delay-2">
-                        <div class="service-icon icon-background-green">
-                            <img
-                                src="Assets/cms-setup.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>CMS &amp; Dynamic Websites</h3>
-
-                        <p>
-                            CMS collections for blogs, projects, teams, and resources.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal">
-                        <div class="service-icon icon-background-purple">
-                            <img
-                                src="Assets/website-redesign.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>Website Redesign</h3>
-
-                        <p>
-                            Modern redesigns that improve trust, flow, and usability.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal reveal-delay-1">
-                        <div class="service-icon icon-background-yellow">
-                            <img
-                                src="Assets/seo-basics.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>SEO Basics</h3>
-
-                        <p>
-                            Meta, heading, image, and page structure optimization.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal reveal-delay-2">
-                        <div class="service-icon icon-background-blue">
-                            <img
-                                src="Assets/maintenance.svg"
-                                alt=""
-                                aria-hidden="true"
-                            >
-                        </div>
-
-                        <h3>Maintenance</h3>
-
-                        <p>
-                            Updates, bug fixes, new sections, and ongoing improvements.
-                        </p>
-                    </article>
-
-                </div>
-                <!-- Services Grid End -->
-
             </div>
         </section>
+
         <!-- =================================
              SERVICES SECTION END
         ================================== -->
@@ -765,7 +655,7 @@
                     </div>
 
                     <h2>
-                        Selected Webflow and frontend projects.
+                        Selected <span>Webflow</span> and <span>frontend</span> projects.
                     </h2>
 
                     <p>
@@ -777,7 +667,7 @@
 
                 <!-- Project Filters Start -->
                 <div
-                    class="project-filter-list reveal"
+                    class="project-filter-list project-filter-btn-wrap reveal"
                     aria-label="Filter projects"
                 >
                     <button
@@ -1044,7 +934,7 @@
              PROCESS SECTION START
         ================================== -->
         <section
-            class="section process-section"
+            class="section process-section section-bg-light"
             id="process"
         >
             <div class="container">
@@ -1056,7 +946,7 @@
                         My Process
                     </div>
 
-                    <h2>A simple process from idea to launch.</h2>
+                    <h2>A simple process from idea to <span>launch</span>.</h2>
 
                     <p>
                         I follow a clear and proven process to deliver the best
@@ -1169,7 +1059,7 @@
                         </div>
 
                         <h2>
-                            What clients say about working with me.
+                            What clients say about <span>working</span> with me.
                         </h2>
 
                         <p>
@@ -1203,14 +1093,14 @@
 
                                         <div class="testimonial-person">
                                             <img
-                                                src="Assets/client-rakib-hasan.jpg"
-                                                alt="Rakib Hasan"
+                                                src="Assets/Michael Anderson.jpg"
+                                                alt="Michael Anderson"
                                                 class="testimonial-avatar"
                                             >
 
                                             <div class="testimonial-person-info">
-                                                <strong>Rakib Hasan</strong>
-                                                <span>CEO, Brikenic</span>
+                                                <strong>Michael Anderson</strong>
+                                                <span>Founder, BrightPath Solutions</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1233,16 +1123,15 @@
 
                                         <div class="testimonial-person">
                                             <img
-                                                src="Assets/client-arifin-babu.jpg"
-                                                alt="Arifin Babu"
+                                                src="Assets/David Wilson.jpg"
+                                                alt="David Wilson"
                                                 class="testimonial-avatar"
                                             >
 
                                             <div class="testimonial-person-info">
-                                                <strong>Arifin Babu</strong>
+                                                <strong>David Wilson</strong>
                                                 <span>
-                                                    Product Manager,
-                                                    Dhaka Studio
+                                                    CEO, GrowthCraft Agency
                                                 </span>
                                             </div>
                                         </div>
@@ -1261,19 +1150,19 @@
                                         </div>
 
                                         <p class="testimonial-message">
-                                            "Amazing freelancer. Extremely patient with me as I took several weeks to close the contract due to personal reasons but Rabiul was very understanding! He is fantastic at this job and very skilled Webflow developer. Gets things done immediately! Highly recommend and will work with him again!"
+                                            "Amazing freelancer. Extremely patient with me as I took several weeks to close the contract due to personal reasons but Yasin was very understanding! He is fantastic at this job and very skilled Webflow developer. Gets things done immediately! Highly recommend and will work with him again!"
                                         </p>
 
                                         <div class="testimonial-person">
                                             <img
-                                                src="Assets/client-simon.jpg"
-                                                alt="Simon"
+                                                src="Assets/Olivia Bennett.jpg"
+                                                alt="Olivia Bennett"
                                                 class="testimonial-avatar"
                                             >
 
                                             <div class="testimonial-person-info">
-                                                <strong>Simon</strong>
-                                                <span>Founder, Creative Studio</span>
+                                                <strong>Olivia Bennett</strong>
+                                                <span>Creative Director, PixelWorks</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1299,18 +1188,19 @@
 
                                         <div class="testimonial-person">
                                             <img
-                                                src="Assets/client-john-smith.jpg"
-                                                alt="John Smith"
+                                                src="Assets/Christopher Reed.jpg"
+                                                alt="Christopher Reed"
                                                 class="testimonial-avatar"
                                             >
 
                                             <div class="testimonial-person-info">
-                                                <strong>John Smith</strong>
-                                                <span>Marketing Director</span>
+                                                <strong>Christopher Reed</strong>
+                                                <span>CEO, TechNova Inc.</span>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
+
                                 <article class="testimonial-slide">
                                     <div class="testimonial-card">
                                         <div
@@ -1326,45 +1216,20 @@
 
                                         <div class="testimonial-person">
                                             <img
-                                                src="Assets/client-john-smith.jpg"
-                                                alt="John Smith"
+                                                src="Assets/Sophia Williams.jpg"
+                                                alt="Sophia Williams"
                                                 class="testimonial-avatar"
                                             >
 
                                             <div class="testimonial-person-info">
-                                                <strong>John Smith</strong>
-                                                <span>Marketing Director</span>
+                                                <strong>Sophia Williams</strong>
+                                                <span>Founder, Bloom Media</span>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="testimonial-slide">
-                                    <div class="testimonial-card">
-                                        <div
-                                            class="testimonial-stars"
-                                            aria-label="5 out of 5 stars"
-                                        >
-                                            ★★★★★
-                                        </div>
 
-                                        <p class="testimonial-message">
-                                            "It was an about pleasure working with Yasin. Great communication and quality work.Would definitely hire him again."
-                                        </p>
-
-                                        <div class="testimonial-person">
-                                            <img
-                                                src="Assets/client-john-smith.jpg"
-                                                alt="John Smith"
-                                                class="testimonial-avatar"
-                                            >
-
-                                            <div class="testimonial-person-info">
-                                                <strong>John Smith</strong>
-                                                <span>Marketing Director</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
+                               
                                 <!-- Testimonial Slide End -->
 
                             </div>
@@ -1493,7 +1358,7 @@
         TOOLS MARQUEE SECTION START
         ================================= -->
         <section
-            class="section tools-section"
+            class="section tools-section section-bg-light"
             id="tools"
         >
             <div class="container">
@@ -1506,7 +1371,7 @@
                     </div>
 
                     <h2>
-                        Tools I use to build better websites.
+                        Tools I use to build <span>better websites</span>.
                     </h2>
 
                     <p>
@@ -1523,19 +1388,9 @@
                     id="toolsMarquee"
                     aria-label="Tools and technologies I use"
                 >
-                    <!-- Left Fade Start -->
-                    <div
-                        class="tools-marquee-fade tools-marquee-fade-left"
-                        aria-hidden="true"
-                    ></div>
-                    <!-- Left Fade End -->
+                
 
-                    <!-- Right Fade Start -->
-                    <div
-                        class="tools-marquee-fade tools-marquee-fade-right"
-                        aria-hidden="true"
-                    ></div>
-                    <!-- Right Fade End -->
+                    
 
 
                     <!-- Moving Track Start -->
@@ -1725,7 +1580,7 @@
                         Expertise
                     </div>
 
-                    <h2>My development expertise and skills.</h2>
+                    <h2>My development <span>expertise</span> and <span>skills</span>.</h2>
 
                     <p>
                         Years of experience in building modern and
@@ -1866,24 +1721,24 @@
 
 
         <!-- =================================
-             FAQ AND FORM SECTION START
+             FAQ SECTION START
         ================================== -->
         <section
-            class="section faq-form-section"
+            class="section faq-form-section section-bg-light"
             id="faq"
         >
-            <div class="container faq-form-layout">
+            <div class="container">
 
                 <!-- FAQ Column Start -->
                 <div class="faq-column">
 
-                    <div class="section-header reveal">
+                    <div class="section-header reveal" style="max-width: 900px; width: 100%; margin-left: auto; margin-right: auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
                         <div class="section-kicker">
                             <span></span>
                             FAQ
                         </div>
 
-                        <h2>Frequently asked questions.</h2>
+                        <h2>Frequently asked <span>questions</span>.</h2>
 
                         <p>
                             Find answers to some common questions.
@@ -2016,9 +1871,40 @@
 
                 </div>
                 <!-- FAQ Column End -->
+            </div>
+        </section>
+        <!-- =================================
+             FAQ SECTION END
+        ================================== -->
+        
 
 
-                <!-- Netlify Contact Form Start -->
+        <!-- =================================
+            FORM SECTION START
+        ================================== -->
+        <section
+            class="section faq-form-section"
+            id="faq"
+        >
+            <div class="container">
+
+                <!-- Form Column Start -->
+                <div class="form-column">
+
+                    <div class="section-header reveal" style="max-width: 900px; width: 100%; margin-left: auto; margin-right: auto; text-align: center; display: flex; flex-direction: column; align-items: center;" >
+                        <div class="section-kicker">
+                            <span></span>
+                            START A PROJECT
+                        </div>
+
+                        <h2>Let's Build Something Amazing <span>Together</span></h2>
+
+                        <p>
+                            Ready to bring your ideas to life? Share your project details with us and let's discuss how we can help you achieve your goals.
+                        </p>
+                    </div>
+
+                    <!-- Netlify Contact Form Start -->
                 <form
                     class="contact-form glass-card reveal reveal-right"
                     id="contactForm"
@@ -2056,7 +1942,7 @@
                             <input
                                 id="name"
                                 name="name"
-                                placeholder="John Doe"
+                                placeholder="Enter your name"
                                 required
                                 type="text"
                                 autocomplete="name"
@@ -2075,7 +1961,7 @@
                             <input
                                 id="email"
                                 name="email"
-                                placeholder="john@example.com"
+                                placeholder="Enter your Email Address"
                                 required
                                 type="email"
                                 autocomplete="email"
@@ -2096,7 +1982,7 @@
                                 inputmode="tel"
                                 name="phone"
                                 pattern="^[+]?[0-9]{7,15}$"
-                                placeholder="+8801712345678"
+                                placeholder="Enter your phone number"
                                 required
                                 title="Please enter numbers only. You can use + at the beginning."
                                 type="tel"
@@ -2255,18 +2141,20 @@
                 </form>
                 <!-- Netlify Contact Form End -->
 
+                </div>
+                <!-- Form Column End -->
+
             </div>
         </section>
         <!-- =================================
-             FAQ AND FORM SECTION END
+            FORM SECTION END
         ================================== -->
-
 
         <!-- =================================
              CONTACT SECTION START
         ================================== -->
         <section
-            class="section contact-section"
+            class="section contact-section section-bg-light"
             id="contact"
         >
             <div class="container">
@@ -2462,32 +2350,10 @@
                 © 2026 Yasin.dev. All rights reserved.
             </p>
 
-            <div class="footer-social-links">
-
-               <a
-                                href="https://www.facebook.com/md.yasinhossain.5245"
-                                aria-label="Facebook" target="_blank"
-                            >
-                                <img
-                                    src="Assets/facebook.png"
-                                    alt="Facebook"
-                                    aria-hidden="true"
-                                >
-                            </a>
-
-                            <a
-                                href="https://www.youtube.com/@YasinStack"
-                                aria-label="Youtube" target="_blank"
-                            >
-                                <img
-                                    src="Assets/youtube.png"
-                                    alt="Youtube"
-                                    aria-hidden="true"
-                                >
-                            </a>
-            </div>
-
             <div class="footer-legal-links">
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
