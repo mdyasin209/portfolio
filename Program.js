@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =================================
    TESTIMONIAL SLIDER JS START
 ================================= */
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const testimonialSlider = document.querySelector(
         "#testimonialSlider"
@@ -479,8 +479,286 @@ document.addEventListener("DOMContentLoaded", function () {
     createSliderDots();
     updateSlider();
     startAutoplay();
+});*/
+    
+    document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector("#testimonialSlider");
+  if (!slider) return;
+
+  const track = slider.querySelector(".testimonial-slider-track");
+  const slides = [...slider.querySelectorAll(".testimonial-slide")];
+  const previousButton = slider.querySelector(".testimonial-previous");
+  const nextButton = slider.querySelector(".testimonial-next");
+  const dotsContainer = slider.querySelector(".testimonial-slider-dots");
+
+  if (
+    !track ||
+    !slides.length ||
+    !previousButton ||
+    !nextButton ||
+    !dotsContainer
+  ) {
+    return;
+  }
+
+  const settings = {
+    desktopVisibleSlides: 2,
+    mobileVisibleSlides: 1,
+    mobileBreakpoint: 767,
+    autoplayDelay: 4000,
+    transitionDuration: 400,
+    minimumSwipeDistance: 40
+  };
+
+  let visibleSlides = getVisibleSlides();
+  let currentIndex = visibleSlides;
+  let autoplayTimer = null;
+  let touchStartX = 0;
+  let isTransitioning = false;
+
+  function getVisibleSlides() {
+    return window.innerWidth <= settings.mobileBreakpoint
+      ? settings.mobileVisibleSlides
+      : settings.desktopVisibleSlides;
+  }
+
+  function getRealIndex() {
+    return (
+      (currentIndex - visibleSlides + slides.length) %
+      slides.length
+    );
+  }
+
+  function enableTransition() {
+    track.style.transition =
+      `transform ${settings.transitionDuration}ms ease`;
+  }
+
+  function disableTransition() {
+    track.style.transition = "none";
+  }
+
+  function cloneSlide(slide) {
+    const clone = slide.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    return clone;
+  }
+
+  function updateSlider() {
+    const slidePercentage = 100 / visibleSlides;
+
+    track.style.transform =
+      `translate3d(-${currentIndex * slidePercentage}%, 0, 0)`;
+
+    updateDots();
+  }
+
+  function updateDots() {
+    const activeIndex = getRealIndex();
+
+    [...dotsContainer.children].forEach((dot, index) => {
+      const isActive = index === activeIndex;
+
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute(
+        "aria-current",
+        isActive ? "true" : "false"
+      );
+    });
+  }
+
+  function buildInfiniteSlider() {
+    visibleSlides = getVisibleSlides();
+    track.innerHTML = "";
+
+    const beforeSlides = slides
+      .slice(-visibleSlides)
+      .map(cloneSlide);
+
+    const afterSlides = slides
+      .slice(0, visibleSlides)
+      .map(cloneSlide);
+
+    [...beforeSlides, ...slides, ...afterSlides].forEach(
+      slide => track.appendChild(slide)
+    );
+
+    currentIndex = visibleSlides;
+    disableTransition();
+    updateSlider();
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(enableTransition);
+    });
+  }
+
+  function createDots() {
+    dotsContainer.innerHTML = "";
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement("button");
+
+      dot.type = "button";
+      dot.className = "testimonial-slider-dot";
+
+      dot.setAttribute(
+        "aria-label",
+        `Go to testimonial ${index + 1}`
+      );
+
+      dot.addEventListener("click", () => {
+        if (isTransitioning) return;
+
+        isTransitioning = true;
+        currentIndex = visibleSlides + index;
+
+        enableTransition();
+        updateSlider();
+        restartAutoplay();
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    updateDots();
+  }
+
+  function moveSlider(direction) {
+    if (isTransitioning) return;
+
+    isTransitioning = true;
+    currentIndex += direction;
+
+    enableTransition();
+    updateSlider();
+  }
+
+  function stopAutoplay() {
+    if (!autoplayTimer) return;
+
+    clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion) return;
+
+    autoplayTimer = setInterval(() => {
+      moveSlider(1);
+    }, settings.autoplayDelay);
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  track.addEventListener("transitionend", event => {
+    if (event.propertyName !== "transform") return;
+
+    const firstRealSlide = visibleSlides;
+    const lastRealSlide =
+      visibleSlides + slides.length - 1;
+
+    if (
+      currentIndex < firstRealSlide ||
+      currentIndex > lastRealSlide
+    ) {
+      disableTransition();
+
+      currentIndex +=
+        currentIndex < firstRealSlide
+          ? slides.length
+          : -slides.length;
+
+      updateSlider();
+
+      void track.offsetHeight;
+      enableTransition();
+    }
+
+    isTransitioning = false;
+  });
+
+  previousButton.addEventListener("click", () => {
+    moveSlider(-1);
+    restartAutoplay();
+  });
+
+  nextButton.addEventListener("click", () => {
+    moveSlider(1);
+    restartAutoplay();
+  });
+
+  slider.addEventListener("mouseenter", stopAutoplay);
+  slider.addEventListener("mouseleave", startAutoplay);
+  slider.addEventListener("focusin", stopAutoplay);
+  slider.addEventListener("focusout", startAutoplay);
+
+  slider.addEventListener(
+    "touchstart",
+    event => {
+      touchStartX = event.changedTouches[0].clientX;
+      stopAutoplay();
+    },
+    { passive: true }
+  );
+
+  slider.addEventListener(
+    "touchend",
+    event => {
+      const touchEndX =
+        event.changedTouches[0].clientX;
+
+      const swipeDistance =
+        touchStartX - touchEndX;
+
+      if (
+        Math.abs(swipeDistance) >=
+        settings.minimumSwipeDistance
+      ) {
+        moveSlider(swipeDistance > 0 ? 1 : -1);
+      }
+
+      startAutoplay();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "resize",
+    debounce(() => {
+      stopAutoplay();
+      isTransitioning = false;
+
+      buildInfiniteSlider();
+      createDots();
+      startAutoplay();
+    }, 180)
+  );
+
+  buildInfiniteSlider();
+  createDots();
+  startAutoplay();
 });
 
+function debounce(callback, delay = 180) {
+  let timeout;
+
+  return function (...args) {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      callback.apply(this, args);
+    }, delay);
+  };
+}
 /* =================================
    TESTIMONIAL SLIDER JS END
 ================================= */
@@ -740,12 +1018,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
-
-
-    
-
-
-
     function validateForm() {
         const formFields = Array.from(
             contactForm.querySelectorAll(
@@ -982,11 +1254,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =================================
    FLOATING CONTACT BUTTON JS END
 ================================= */
-
-
-
-
-
 /* =================================
    TOOLS MARQUEE JS START
 ================================= */
@@ -1142,19 +1409,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /* =================================
    TOOLS MARQUEE JS END
 ================================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =================================
    Services JS Start
@@ -1332,3 +1586,162 @@ startAuto();
    Services JS End
 ================================= */
 
+/* =================================
+   Gallery JS Start
+================================= */
+
+// fixed fan shape — 7 slots, each with its own tilt/size. these values
+// never change and never animate; they are the permanent "frame".
+const slotDefs = [
+  { angle:-42, h:460, w:210 },
+  { angle:-27, h:380, w:200 },
+  { angle:-13, h:310, w:190 },
+  { angle:0,   h:250, w:180 },
+  { angle:13,  h:310, w:190 },
+  { angle:27,  h:380, w:200 },
+  { angle:42,  h:460, w:210 },
+];
+ 
+// the pool of photos that cycle THROUGH the fixed slots.
+// swap these src values for your real portfolio images.
+const photos = [
+  "Assets/gallery-image-one.png",
+  "Assets/gallery-image-five.AVIF",
+  "Assets/gallery-image-three.png",
+  "Assets/gallery-image-six.AVIF",
+  "Assets/gallery-image-four.png",
+  "Assets/gallery-image-seven.jpg",
+  "Assets/gallery-image-two.png",
+];
+ 
+const track = document.getElementById('gallery-track');
+const STRIP_DURATION = 5; // seconds for one photo to fully pass through a slot
+ 
+function computeScale(){
+  const naturalWidth = slotDefs.reduce((sum, s) => sum + s.w, 0) + (slotDefs.length - 1) * 6;
+  const available = window.innerWidth * 0.94;
+  return Math.min(1, available / naturalWidth);
+}
+ 
+function buildTrack(){
+  track.innerHTML = '';
+  const isMobile = window.innerWidth <= 720;
+  const sizeScale = computeScale();
+ 
+  slotDefs.forEach((slot, slotIndex) => {
+    let w, h, angle, depth;
+ 
+    if (isMobile){
+      // full-width stacked rows — no tilt, no depth, just the image
+      // strip sliding inside each fixed-width, fixed-height row.
+      w = window.innerWidth - 40;
+      h = Math.round(w * 0.6);
+      angle = 0;
+      depth = 0;
+    } else {
+      w = slot.w * sizeScale;
+      h = slot.h * sizeScale;
+      angle = slot.angle;
+      depth = -Math.abs(slot.angle) * 3.4 * sizeScale;
+    }
+ 
+    const el = document.createElement('div');
+    el.className = 'gallery-slot';
+    el.style.width = w + 'px';
+    el.style.height = h + 'px';
+    el.style.transform = `rotateY(${angle}deg) translateZ(${depth}px)`;
+ 
+    // rotate the photo array by this slot's index so each fixed frame
+    // shows a different photo at any given instant — that offset is
+    // what makes the flow read as moving right-to-left across the wall,
+    // even though every frame itself is 100% stationary.
+    const rotated = photos.slice(slotIndex).concat(photos.slice(0, slotIndex));
+    const loopPhotos = [...rotated, ...rotated]; // doubled for a seamless loop
+ 
+    const strip = document.createElement('div');
+    strip.className = 'strip';
+    strip.style.setProperty('--frame-w', w + 'px');
+    strip.style.animationDuration = (STRIP_DURATION * photos.length) + 's';
+    strip.innerHTML = loopPhotos
+      .map(src => `<img src="${src}" alt="" loading="lazy">`)
+      .join('');
+ 
+    el.appendChild(strip);
+    track.appendChild(el);
+  });
+}
+ 
+buildTrack();
+ 
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(buildTrack, 200);
+});
+
+
+function buildTrack(){
+  track.innerHTML = '';
+
+  const isMobile = window.innerWidth <= 720;
+  const sizeScale = computeScale();
+
+  // Mobile-এ শুধু মাঝের একটি slot তৈরি হবে
+  const activeSlots = isMobile
+    ? [slotDefs[3]]
+    : slotDefs;
+
+  activeSlots.forEach((slot, slotIndex) => {
+    let w, h, angle, depth;
+
+    if (isMobile){
+      w = window.innerWidth - 40;
+      h = 500;
+      angle = 0;
+      depth = 0;
+    } else {
+      w = slot.w * sizeScale;
+      h = slot.h * sizeScale;
+      angle = slot.angle;
+      depth = -Math.abs(slot.angle) * 3.4 * sizeScale;
+    }
+
+    const el = document.createElement('div');
+    el.className = 'gallery-slot';
+    el.style.width = w + 'px';
+    el.style.height = h + 'px';
+    el.style.transform = `rotateY(${angle}deg) translateZ(${depth}px)`;
+
+    const rotated = photos
+      .slice(slotIndex)
+      .concat(photos.slice(0, slotIndex));
+
+    const loopPhotos = [...rotated, ...rotated];
+
+    const strip = document.createElement('div');
+    strip.className = 'strip';
+    strip.style.setProperty('--frame-w', w + 'px');
+    strip.style.animationDuration =
+      (STRIP_DURATION * photos.length) + 's';
+
+    strip.innerHTML = loopPhotos
+      .map(src => `
+        <img
+          src="${src}"
+          alt="Gallery image"
+          loading="lazy"
+        >
+      `)
+      .join('');
+
+    el.appendChild(strip);
+    track.appendChild(el);
+  });
+}
+
+
+
+
+/* =================================
+   Gallery JS End
+================================= */

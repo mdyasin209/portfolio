@@ -8,9 +8,8 @@
 
         <title>Projects | Webflow Portfolio by Yasin | Webflow & Frontend Developer</title>
 
-        <link rel="icon" type="image/png" href="./Assets/favicon.png">
+        <link rel="icon" type="image/png" href="./Assets/Yasin Protfolio Fav Icon.png">
         <link rel="apple-touch-icon" href="./Assets/apple-touch-icon.png">
-
         <!-- Primary SEO -->
         <meta name="description"
             content="Explore Yasin's portfolio of Webflow projects including Figma to Webflow, CMS websites, responsive frontend development, GSAP animations, payment integration, automation, localization, and custom Webflow solutions.">
@@ -37,7 +36,7 @@
             content="Browse real Webflow client projects featuring CMS, Figma to Webflow, animations, responsive development, automation, payment integration, and custom frontend solutions.">
 
         <meta property="og:url" content="https://imyasin.dev/projects">
-        <meta property="og:image" content="https://imyasin.dev/Assets/og-projects.png">
+        <meta property="og:image" content="https://imyasin.dev/Assets/Yasin Protfolio Projects OG Image.png">
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
@@ -99,15 +98,15 @@
                 class="desktop-navigation"
                 aria-label="Primary navigation"
             >
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#process">Process</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#tools">Tools</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
+                <a href="https://imyasin.dev/#about">About</a>
+                <a href="https://imyasin.dev/#services">Services</a>
+                <a href="https://imyasin.dev/#projects">Projects</a>
+                <a href="https://imyasin.dev/#process">Process</a>
+                <a href="https://imyasin.dev/#testimonials">Testimonials</a>
+                <a href="https://imyasin.dev/#tools">Tools</a>
+                <a href="https://imyasin.dev/#expertise">Expertise</a>
+                <a href="https://imyasin.dev/#faq">FAQ</a>
+                <a href="https://imyasin.dev/#contact">Contact</a>
             </nav>
             <!-- Desktop Navigation End -->
 
@@ -153,15 +152,15 @@
             aria-label="Mobile navigation"
         >
             <div class="container mobile-navigation-inner">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#process">Process</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#tools">Tools</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
+                <a href="https://imyasin.dev/#about">About</a>
+                <a href="https://imyasin.dev/#services">Services</a>
+                <a href="https://imyasin.dev/#projects">Projects</a>
+                <a href="https://imyasin.dev/#process">Process</a>
+                <a href="https://imyasin.dev/#testimonials">Testimonials</a>
+                <a href="https://imyasin.dev/#tools">Tools</a>
+                <a href="https://imyasin.dev/#expertise">Expertise</a>
+                <a href="https://imyasin.dev/#faq">FAQ</a>
+                <a href="https://imyasin.dev/#contact">Contact</a>
 
                 <a
                     href="#contact"
@@ -750,7 +749,7 @@
                         premium.
                     </h2>
 
-                    <p>
+                    <p style="max-width: 600px; margin-left: auto; margin-right: auto;">
                         Send your project details, design file, or reference website and I will help you turn it into a clean, responsive website.
                     </p>
 
@@ -843,9 +842,12 @@
      FLOATING CONTACT BUTTON START
     ================================= -->
         <div
-            class="floating-contact collapsed"
-            id="floatingContact"
-        >
+        class="floating-contact collapsed"
+        id="floatingContact"
+    >
+        <!-- Contact Menu Start -->
+        <div class="floating-contact-menu" id="floatingContactMenu">
+
             <!-- Call Button Start -->
             <a
                 class="floating-contact-action floating-contact-call"
@@ -878,30 +880,32 @@
             </a>
             <!-- WhatsApp Button End -->
 
-            <!-- Main Toggle Button Start -->
-            <button
-                class="floating-contact-main"
-                id="floatingContactButton"
-                type="button"
-                aria-label="Open contact options"
-                aria-expanded="false"
-                aria-controls="floatingContact"
-            >
-                <span class="floating-contact-main-icon">
-                    <img
-                        src="Assets/Plus Icon.png"
-                        alt=""
-                        aria-hidden="true"
-                    >
-                </span>
-            </button>
-            <!-- Main Toggle Button End -->
         </div>
+        <!-- Contact Menu End -->
+
+
+        <!-- Main Toggle Button Start -->
+        <button
+            class="floating-contact-main"
+            id="floatingContactButton"
+            type="button"
+            aria-label="Open contact options"
+            aria-expanded="false"
+            aria-controls="floatingContactMenu"
+        >
+            <span class="floating-contact-main-icon">
+                <img
+                    src="Assets/Plus Icon.png"
+                    alt=""
+                    aria-hidden="true"
+                >
+            </span>
+        </button>
+        <!-- Main Toggle Button End -->
+    </div>
     <!-- ================================
         FLOATING CONTACT BUTTON END
     ================================= -->
-
-
     <script src="Program.js"></script>
 </body>
 </html>

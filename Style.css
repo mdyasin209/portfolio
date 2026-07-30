@@ -178,7 +178,7 @@ h3 {
 h1 {
     max-width: 760px;
     margin-bottom: 24px;
-    font-size: clamp(2.5rem, 4vw, 4.0rem);
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
     line-height: 1.06;
     letter-spacing: -0.05em;
 }
@@ -903,6 +903,16 @@ h3 {
         max-width: 110px;
         max-height: 36px;
     }
+    .hero-decoration-one {
+        top: 90px;
+        right: 41px;
+        width: 17px;
+        height: 17px;
+    }
+    .hero-decoration-two {
+        bottom: 91px;
+        left: 56px;
+    }
 }
 
 /* Mobile Landscape Responsive End */
@@ -976,6 +986,24 @@ h3 {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-medium);
     box-shadow: var(--shadow-small);
+}
+
+.about-stats-card{
+    min-height: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-stats-card div{
+    position: absolute;
+    top: -30px;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
 }
 
 
@@ -2318,6 +2346,7 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     position: relative;
     width: 100%;
     padding: 30px;
+    box-shadow: var(--shadow-large);
     
 }
 
@@ -2404,8 +2433,7 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     position: absolute;
     top: 50%;
     right: 15px;
-    width: 14px;
-    height: 14px;
+    width: 20px;  
     object-fit: contain;
     pointer-events: none;
     transform: translateY(-50%);
@@ -2771,20 +2799,40 @@ Marquee-এর যেকোনো জায়গায় hover করলে
 /* =================================
    FLOATING CONTACT BUTTON CSS START
 ================================= */
-
 .floating-contact {
     position: fixed;
     right: 26px;
     bottom: 70px;
     z-index: 90;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
 }
-
+/* Contact Menu Wrapper */
+.floating-contact-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 73px;
+    max-height: 126px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:
+        max-height var(--transition-normal),
+        margin var(--transition-normal),
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal);
+}
+/* Action Buttons */
 .floating-contact-action,
 .floating-contact-main {
     display: grid;
+    position: relative;
     width: 58px;
     height: 58px;
     flex: 0 0 58px;
@@ -2792,20 +2840,17 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     border: 0;
     border-radius: 50%;
     place-items: center;
-    box-shadow:
-        0 12px 28px rgba(20, 31, 72, 0.2);
     transition:
         opacity var(--transition-normal),
         transform var(--transition-normal),
         box-shadow var(--transition-normal),
         filter var(--transition-normal);
 }
-
+/* Contact Action */
 .floating-contact-action {
-    position: relative;
     color: #ffffff;
 }
-
+/* Outline Effect */
 .floating-contact-action::before,
 .floating-contact-main::before {
     position: absolute;
@@ -2821,11 +2866,12 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     pointer-events: none;
 }
 
+
+/* Hover Effect */
 .floating-contact-action:hover,
 .floating-contact-main:hover {
     transform: translateY(-4px) scale(1.04);
-    box-shadow:
-        0 18px 36px rgba(20, 31, 72, 0.26);
+    
 }
 
 .floating-contact-action:hover::before,
@@ -2833,7 +2879,7 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     opacity: 1;
     transform: scale(1);
 }
-
+/* Call Button */
 .floating-contact-call {
     background:
         linear-gradient(
@@ -2842,11 +2888,10 @@ Marquee-এর যেকোনো জায়গায় hover করলে
             #0ca76a 100%
         );
 }
-
 .floating-contact-call::before {
     border-color: rgba(16, 216, 131, 0.4);
 }
-
+/* WhatsApp Button */
 .floating-contact-whatsapp {
     background:
         linear-gradient(
@@ -2855,30 +2900,27 @@ Marquee-এর যেকোনো জায়গায় hover করলে
             #1fbd5c 100%
         );
 }
-
 .floating-contact-whatsapp::before {
     border-color: rgba(37, 211, 102, 0.4);
 }
-
+/* Action Icons */
 .floating-contact-action img {
     width: 28px;
     height: 28px;
     object-fit: contain;
     filter: invert();
 }
-
+/* Main Toggle Button */
 .floating-contact-main {
-    position: relative;
     overflow: hidden;
     color: #ffffff;
     background: var(--gradient-primary);
     cursor: pointer;
 }
-
 .floating-contact-main::before {
     border-color: rgba(78, 87, 255, 0.35);
 }
-
+/* Main Button Icon */
 .floating-contact-main-icon {
     display: grid;
     width: 22px;
@@ -2888,94 +2930,148 @@ Marquee-এর যেকোনো জায়গায় hover করলে
         transform var(--transition-normal);
     filter: invert();
 }
-
 .floating-contact-main-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-
+/* Rotate Plus Icon When Open */
 .floating-contact:not(.collapsed)
 .floating-contact-main-icon {
     transform: rotate(45deg);
 }
+/* Collapsed Menu */
+.floating-contact.collapsed
+.floating-contact-menu {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    pointer-events: none;
+    
+}
+/* Open Menu */
+.floating-contact:not(.collapsed)
+.floating-contact-menu {
+    max-height: 147px;
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+}
+/* Hidden Action Buttons */
 .floating-contact.collapsed
 .floating-contact-action {
     opacity: 0;
     transform:
-        translateX(28px)
-        scale(0.78);
+        translateY(15px)
+        scale(0.8);
     pointer-events: none;
 }
 
+
+/* Visible Action Buttons */
 .floating-contact:not(.collapsed)
 .floating-contact-action {
     opacity: 1;
     transform:
-        translateX(0)
+        translateY(0)
         scale(1);
+    pointer-events: auto;
 }
-
+/* Opening Animation */
+.floating-contact:not(.collapsed)
 .floating-contact-action:nth-child(1) {
-    transition-delay: 80ms;
-}
-
-.floating-contact-action:nth-child(2) {
     transition-delay: 40ms;
 }
-
+.floating-contact:not(.collapsed)
+.floating-contact-action:nth-child(2) {
+    transition-delay: 80ms;
+}
+/* Closing Animation */
 .floating-contact.collapsed
 .floating-contact-action:nth-child(1),
 .floating-contact.collapsed
 .floating-contact-action:nth-child(2) {
     transition-delay: 0ms;
 }
-
-
 /* Mobile Landscape Start */
 @media screen and (max-width: 767px) {
     .floating-contact {
-        right: 20px;
+        right: 12px;
         bottom: 20px;
-        gap: 10px;
     }
-
+    .floating-contact-menu {
+        width: 54px;
+        max-height: 118px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .floating-contact.collapsed
+    .floating-contact-menu {
+        max-height: 0;
+        margin-bottom: 0;
+    }
+    .floating-contact:not(.collapsed)
+    .floating-contact-menu {
+        max-height: 122px;
+        margin-bottom: 10px;
+    }
     .floating-contact-action,
     .floating-contact-main {
         width: 54px;
         height: 54px;
         flex-basis: 54px;
     }
-
     .floating-contact-action img {
         width: 26px;
         height: 26px;
     }
+    .about-cards-grid {
+        display: grid;
+        grid-gap: 45px !important;
+        margin-top: 24px;
+    }
 }
 /* Mobile Landscape End */
-
 
 /* Mobile Portrait Start */
 @media screen and (max-width: 479px) {
     .floating-contact {
-        right: 20px;
+        right: 12px;
         bottom: 20px;
-        gap: 8px;
     }
-
+    .floating-contact-menu {
+        width: 70px;
+        max-height: 128px;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .floating-contact.collapsed
+    .floating-contact-menu {
+        max-height: 0;
+        margin-bottom: 0;
+    }
+    .floating-contact:not(.collapsed)
+    .floating-contact-menu {
+        max-height: 128px;
+        margin-bottom: 8px;
+    }
     .floating-contact-action,
     .floating-contact-main {
         width: 50px;
         height: 50px;
         flex-basis: 50px;
     }
-
     .floating-contact-action img {
         width: 24px;
         height: 24px;
     }
-
     .floating-contact-main-icon {
         width: 20px;
         height: 20px;
@@ -2983,13 +3079,14 @@ Marquee-এর যেকোনো জায়গায় hover করলে
 }
 /* Mobile Portrait End */
 
-
 /* Reduced Motion Support Start */
 @media (prefers-reduced-motion: reduce) {
+    .floating-contact-menu,
     .floating-contact-action,
     .floating-contact-main,
     .floating-contact-main-icon {
         transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
     }
 }
 /* Reduced Motion Support End */
@@ -3405,3 +3502,116 @@ Marquee-এর যেকোনো জায়গায় hover করলে
 /* =================================
    REDUCED MOTION SUPPORT END
 ================================= */
+
+
+.gallery{
+  position:relative;
+  width:100%;
+  padding:90px 0 80px;
+  overflow:hidden;
+  background:#FAFAF8;
+}
+ 
+/* soft fade at both edges so cards don't hard-cut at the viewport */
+.gallery::before,
+.gallery::after{
+  content:'';
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:120px;
+  z-index:5;
+  pointer-events:none;
+}
+.gallery::before{
+  left:0;
+  background:linear-gradient(90deg, #FAFAF8, rgba(250,250,248,0));
+}
+.gallery::after{
+  right:0;
+  background:linear-gradient(270deg, #FAFAF8, rgba(250,250,248,0));
+}
+ 
+.gallery-stage{
+  perspective:1000px;
+  perspective-origin:50% 20%;
+  display:flex;
+  justify-content:center;
+}
+ 
+/* the wall itself — this NEVER animates or translates.
+   its child slots are fixed in position/rotation/size forever. */
+.gallery-track{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+ 
+.gallery-slot{
+  position:relative;
+  flex-shrink:0;
+  border-radius:var(--radius-medium);
+  overflow:hidden;
+  box-shadow:0 20px 40px -18px rgba(20,20,20,.35);
+  transform-style:preserve-3d;
+  transition:transform .4s ease;
+}
+ 
+.gallery-slot:hover{
+  transform:translateY(-6px) !important;
+}
+ 
+/* the strip of images inside a fixed slot — THIS is what slides */
+.strip{
+  display:flex;
+  height:100%;
+  width:max-content;
+  animation-name:slide;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  will-change:transform;
+}
+ 
+.gallery:hover .strip{
+  /*animation-play-state:paused;*/
+}
+ 
+@keyframes slide{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+ 
+.strip img{
+  display:block;
+  height:100%;
+  width:var(--frame-w);
+  object-fit:cover;
+  flex-shrink:0;
+}
+
+@media (max-width:720px){
+  .gallery-stage{
+    display:flex;
+    justify-content:center;
+  }
+
+  .gallery-track{
+    display:block;
+    width:calc(100% - 40px) !important;
+    padding:0;
+  }
+
+  .gallery-slot{
+    width:100% !important;
+    height:500px !important;
+  }
+
+  .gallery{
+    padding:44px 0 40px;
+  }
+
+  .gallery::before,
+  .gallery::after{
+    display:none;
+  }
+}
