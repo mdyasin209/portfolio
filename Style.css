@@ -180,7 +180,7 @@ h1 {
     margin-bottom: 24px;
     font-size: clamp(2.3rem, 4vw, 3.5rem);
     line-height: 1.06;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
 }
 
 h1 span,
@@ -192,7 +192,7 @@ h2 {
     margin-bottom: 14px;
     font-size: clamp(2rem, 3.2vw, 3rem);
     line-height: 1.14;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
 }
 
 h3 {
@@ -241,14 +241,17 @@ h3 {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+
 }
 .section-kicker span,
 .eyebrow-dot {
-    width: 5px;
-    height: 5px;
+    min-width: 8px;
+    height: 8px;
     flex: 0 0 5px;
     background: var(--color-primary);
     border-radius: 50%;
+    box-shadow:
+        0 0 0 6px rgba(49, 87, 255, 0.08);
 }
 
 .section-button-wrap {
@@ -401,19 +404,22 @@ h3 {
 
 .site-logo-icon {
     height: 50px;
+    width: 50px;
+    border-radius: 50%;
     object-fit: contain;
+    border: 2px solid var(--color-primary);
 }
-
-.site-logo-text {
-    color: var(--color-heading);
-    font-size: 20px;
+.gradient-text {
+    background: linear-gradient(
+        135deg,
+        #3157ff 0%,
+        #8d4dff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     font-weight: 800;
-    letter-spacing: -0.04em;
-}
-
-.site-logo-text span {
-    color: #9aa3ba;
-    font-weight: 600;
 }
 
 .desktop-navigation {
@@ -700,7 +706,8 @@ h3 {
     position: absolute;
     background: var(--gradient-primary);
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(65, 82, 255, 0.22);
+    box-shadow:
+        0 0 0 6px rgba(49, 87, 255, 0.08);
 }
 
 .hero-decoration-one {
@@ -829,7 +836,6 @@ h3 {
     width: var(--brand-logo-width);
     min-width: var(--brand-logo-width);
     min-height: 64px;
-    opacity: 0.72;
     transition:
         opacity var(--transition-normal),
         background-color var(--transition-normal),
@@ -838,7 +844,6 @@ h3 {
 }
 
 .brand-item:hover {
-    opacity: 1;
     transform: translateY(-4px) scale(1.04);
 }
 
@@ -865,21 +870,6 @@ h3 {
 }
 
 /* Right To Left Animation End */
-
-
-/* Tablet Responsive Start */
-
-@media screen and (max-width: 991px) {
-    :root {
-        --brand-marquee-gap: 38px;
-        --brand-logo-width: 135px;
-        --brand-marquee-duration: 22s;
-        --brand-fade-width: 60px;
-    }
-}
-
-/* Tablet Responsive End */
-
 
 /* Mobile Landscape Responsive Start */
 
@@ -960,24 +950,20 @@ h3 {
    BRAND CSS END
 ================================= */
 
-
 /* =================================
    ABOUT CSS START
 ================================= */
-
 .about-layout {
     display: grid;
     grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
     align-items: center;
     gap: 50px;
 }
-
 .statistics-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
-
 .statistic-card,
 .project-card,
 .service-card,
@@ -987,23 +973,48 @@ h3 {
     border-radius: var(--radius-medium);
     box-shadow: var(--shadow-small);
 }
-
 .about-stats-card{
-    min-height: 150px;
+    min-height: 140px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 24px 10px;
+    text-align: center;
+    transition:
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal),
+        transform var(--transition-normal);
+     background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-small);
+}
+.about-stats-card:hover {
+    border-color: rgba(49, 87, 255, 0.25);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-7px);
 }
 .about-stats-card div{
     position: absolute;
-    top: -30px;
+    top: -25px;
     border-radius: 50% !important;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border: 1px solid var(--color-border);
     background-color: var(--color-surface);
+}
+.about-stats-card strong {
+    display: block;
+    margin: 14px 0 5px;
+    color: var(--color-primary);
+    font-size: 28px;
+    line-height: 1.2;
+}
+.about-stats-card span{
+    line-height: 22px;
+    font-size: 16px;
 }
 
 
@@ -1078,6 +1089,524 @@ h3 {
 /* =================================
    ABOUT CSS END
 ================================= */
+
+
+
+/* ========================================
+   About Section
+======================================== */
+
+.about-section {
+    position: relative;
+    padding: var(--section-padding) 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(141, 77, 255, 0.09),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 12% 80%,
+            rgba(49, 87, 255, 0.08),
+            transparent 30%
+        ),
+        var(--color-background);
+}
+.about-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.92fr);
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 70px;
+    border: 1px solid rgba(215, 220, 233, 0.8);
+    border-radius: var(--radius-large);
+    background: var(--gradient-soft);
+    box-shadow: var(--shadow-medium);
+}
+/* ========================================
+   About Section Label
+======================================== */
+.about-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.about-section-label-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    box-shadow:
+        0 0 0 6px rgba(49, 87, 255, 0.08);
+}
+/* ========================================
+   About Content
+======================================== */
+
+.about-content {
+    position: relative;
+    z-index: 5;
+    max-width: 680px;
+}
+.about-heading {
+    max-width: 650px;
+    margin: 0;
+}
+
+.about-description {
+    max-width: 640px;
+    margin: 26px 0 0;
+}
+/* ========================================
+   About Features
+======================================== */
+
+.about-features {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 34px;
+}
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: var(--shadow-small);
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+.about-feature:hover {
+    transform: translateY(-4px);
+    border-color: rgba(49, 87, 255, 0.3);
+    box-shadow: var(--shadow-medium);
+}
+/* Feature Icon */
+.about-feature-icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border: 1px solid rgba(49, 87, 255, 0.12);
+    border-radius: 14px;
+    background: var(--color-blue-soft);
+}
+.about-feature-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+/* Feature Text */
+.about-feature-text {
+    min-width: 0;
+}
+.about-feature-text h3 {
+    margin: 0;
+    color: var(--color-heading);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+.about-feature-text p {
+    margin: 4px 0 0;
+    color: var(--color-muted);
+    font-family: var(--font-family);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+/* ========================================
+   About Button
+======================================== */
+
+.about-button {
+
+    margin-top: 34px;
+}
+/* ========================================
+   About Visual
+======================================== */
+
+.about-visual {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    min-height: 540px;
+    isolation: isolate;
+}
+
+.about-image-background {
+    position: absolute;
+    z-index: -3;
+    right: 0;
+    bottom: 0;
+    width: 94%;
+    height: 92%;
+    overflow: hidden;
+    border: 1px solid rgba(49, 87, 255, 0.18);
+    border-radius: 42px 42px 24px 24px;
+    background:
+        radial-gradient(
+            circle at 55% 25%,
+            rgba(141, 77, 255, 0.25),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #edf2ff 0%,
+            #e4e9ff 45%,
+            #f2eaff 100%
+        );
+
+    box-shadow: var(--shadow-large);
+}
+.about-image-background::before {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(49, 87, 255, 0.08);
+    content: "";
+}
+.about-image-background::after {
+    position: absolute;
+    bottom: -70px;
+    left: -50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(141, 77, 255, 0.1);
+    content: "";
+}
+.about-image-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 0 0 24px 24px;
+}
+.about-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    filter:
+        drop-shadow(
+            0 25px 30px rgba(17, 25, 54, 0.16)
+        );
+}
+/* ========================================
+   Decorative Webflow Shape
+======================================== */
+
+.about-webflow-shape {
+    position: absolute;
+    z-index: -1;
+    top: 80px;
+    right: 10px;
+    color: rgba(49, 87, 255, 0.08);
+    font-family: var(--font-family);
+    font-size: clamp(180px, 17vw, 300px);
+    font-weight: 900;
+    line-height: 0.8;
+    user-select: none;
+}
+.about-webflow-shape img{
+    max-width: 150px; 
+    opacity: .1;
+}
+
+/* ========================================
+   Experience Card
+======================================== */
+
+.about-experience-card {
+    position: absolute;
+    z-index: 4;
+    right: -30px;
+    bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+    padding: 22px;
+    border: 1px solid rgba(49, 87, 255, 0.17);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-medium);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.about-experience-card strong {
+    color: transparent;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-family);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+}
+.about-experience-card span {
+    margin-top: 8px;
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+/* ========================================
+   Decorative Dots
+======================================== */
+
+.about-floating-dot {
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    box-shadow:
+        0 0 0 8px rgba(49, 87, 255, 0.08);
+}
+.about-floating-dot-one {
+    top: 50px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+}
+.about-floating-dot-two {
+    top: 130px;
+    right: -5px;
+    width: 7px;
+    height: 7px;
+}
+/* ========================================
+   Laptop and Small Desktop
+======================================== */
+
+@media screen and (max-width: 1199px) {
+    .about-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(380px, 0.85fr);
+
+        gap: 48px;
+        padding: 56px 46px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+    .about-feature {
+        padding: 12px 14px;
+    }
+    .about-experience-card {
+        right: -10px;
+    }
+}
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media screen and (max-width: 991px) {
+    .about-section {
+        padding: 50px 24px;
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        min-height: auto;
+        padding: 54px 42px;
+    }
+    .about-heading {
+        max-width: 730px;
+    }
+    .about-description {
+        max-width: 700px;
+    }
+    .about-features {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+        max-width: 100%;
+    }
+    .about-feature {
+        flex-direction: column;
+        justify-content: center;
+        min-height: 145px;
+        text-align: center;
+    }
+    .about-visual {
+        max-width: 620px;
+        min-height: 550px;
+        margin: 0 auto;
+    }
+    .about-image-wrapper {
+        height: 550px;
+    }
+    .about-experience-card {
+        right: 10px;
+    }
+}
+/* ========================================
+   Mobile Landscape
+======================================== */
+
+@media screen and (max-width: 767px) {
+    .about-section {
+        padding: 40px 16px;
+    }
+    .about-container {
+        gap: 44px;
+        padding: 40px 24px;
+        border-radius: 20px;
+    }
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 28px;
+    }
+    .about-feature {
+        flex-direction: row;
+        justify-content: flex-start;
+        min-height: auto;
+        text-align: left;
+    }
+    .about-visual {
+        min-height: 440px;
+    }
+    .about-image-wrapper {
+        height: 440px;
+    }
+    .about-image-background {
+        width: 100%;
+        height: 90%;
+        border-radius: 30px 30px 20px 20px;
+    }
+    .about-experience-card {
+        right: 0;
+        bottom: 20px;
+        min-width: 145px;
+        padding: 17px;
+    }
+    .about-experience-card strong {
+        font-size: 38px;
+    }
+    .about-experience-card span {
+        font-size: 13px;
+    }
+    .about-webflow-shape {
+        top: 80px;
+        right: 10px;
+        font-size: 180px;
+    }
+    .about-floating-dot-one {
+        top: 30px;
+        left: 20px;
+    }
+}
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media screen and (max-width: 479px) {
+    .about-section {
+        padding: 32px 12px;
+    }
+    .about-container {
+        padding: 34px 18px 24px;
+    }
+    .about-feature-icon {
+        width: 42px;
+        height: 42px;
+    }
+    .about-feature-icon img {
+        width: 22px;
+        height: 22px;
+    }
+    .about-visual {
+        min-height: 360px;
+    }
+    .about-image-wrapper {
+        height: 300px;
+    }
+    .about-experience-card {
+        right: 5px;
+        bottom: 12px;
+        min-width: 130px;
+        padding: 14px;
+    }
+
+    .about-experience-card strong {
+        font-size: 32px;
+    }
+    
+    .about-webflow-shape {
+        top: 70px;
+    }
+    .about-webflow-shape img{
+        max-width: 100px;
+    }
+    .about-floating-dot-two {
+        display: none;
+    }
+}
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .about-feature,
+    .about-button,
+    .about-button-icon {
+        transition: none;
+    }
+}
+
+
+
+
+
 
 
 /* =================================
@@ -1743,8 +2272,8 @@ h3 {
 
 .testimonial-cta-card h2 {
     margin: 9px 0 18px;
-    font-size: clamp(1.8rem, 3.0vw, 3.4rem);
-    line-height: 0.98;
+    font-size: clamp(1.8rem, 2.5vw, 3.4rem);
+    line-height: 1;
 }
 
 .testimonial-cta-card > p {
@@ -3037,6 +3566,11 @@ Marquee-এর যেকোনো জায়গায় hover করলে
         grid-gap: 45px !important;
         margin-top: 24px;
     }
+
+    .section-kicker, .eyebrow {
+        font-size: 14px;
+        font-weight: 600;
+    }
 }
 /* Mobile Landscape End */
 
@@ -3075,6 +3609,12 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     .floating-contact-main-icon {
         width: 20px;
         height: 20px;
+    }
+    h1 {
+        letter-spacing: -0.02em;
+    }
+    h2 {
+        line-height: 1.40;
     }
 }
 /* Mobile Portrait End */
@@ -3148,6 +3688,12 @@ Marquee-এর যেকোনো জায়গায় hover করলে
 
 @media screen and (max-width: 991px) {
     :root {
+        --brand-marquee-gap: 38px;
+        --brand-logo-width: 135px;
+        --brand-marquee-duration: 22s;
+        --brand-fade-width: 60px;
+    }
+    :root {
         --section-padding: 72px;
     }
 
@@ -3163,6 +3709,8 @@ Marquee-এর যেকোনো জায়গায় hover করলে
         display: flex;
         flex-direction: column;
         width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .hero-visual {
@@ -3224,6 +3772,8 @@ Marquee-এর যেকোনো জায়গায় hover করলে
 
     h1 {
         font-size: clamp(2.0rem, 10vw, 3.0rem);
+        line-height: 1.2;
+        
     }
 
     .hero-section {
@@ -3344,15 +3894,16 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     }
 
     h1 {
-        font-size: 2.0rem;
+        font-size: 1.7rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .site-logo-icon {
-        height: 34px;
+        height: 40px;
+        width: 40px;
     }
 
     .site-logo-text {
@@ -3397,6 +3948,9 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     /*.brand-panel {
         padding: 20px;
     }*/
+    .indicator {
+        margin-bottom: -20px;
+    }
 
     .statistics-grid,
     .services-grid {
@@ -3434,7 +3988,7 @@ Marquee-এর যেকোনো জায়গায় hover করলে
     }
 
     .testimonial-cta-card h2 {
-        font-size: 2.75rem;
+        font-size: 2.0rem;
     }
 
     .faq-question {
@@ -3442,11 +3996,9 @@ Marquee-এর যেকোনো জায়গায় hover করলে
         padding: 17px;
         font-size: 14px;
     }
-
     .faq-answer p {
         padding: 0 17px 17px;
     }
-
     .contact-form,
     .contact-panel {
         padding: 19px;
@@ -3468,6 +4020,10 @@ Marquee-এর যেকোনো জায়গায় hover করলে
         flex-direction: column;
         gap: 7px;
     }
+    .footer-content p{
+        order: 3;
+    }
+
 }
 
 /* =================================
